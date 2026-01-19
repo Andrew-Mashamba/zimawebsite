@@ -17,13 +17,13 @@
 
         body {
             font-family: 'DejaVu Sans', Arial, sans-serif;
-            font-size: 11px;
-            line-height: 1.4;
+            font-size: 10.5px;
+            line-height: 1.5;
             color: #1A1A1A;
         }
 
         .page {
-            padding: 40px 50px;
+            padding: 35px 45px;
             page-break-after: always;
             min-height: 100%;
         }
@@ -42,19 +42,19 @@
         .header {
             display: table;
             width: 100%;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             border-bottom: 3px solid #FF621B;
-            padding-bottom: 15px;
+            padding-bottom: 12px;
         }
 
         .header-logo {
             display: table-cell;
             vertical-align: middle;
-            width: 150px;
+            width: 120px;
         }
 
         .header-logo img {
-            width: 130px;
+            width: 100px;
             height: auto;
         }
 
@@ -65,14 +65,14 @@
         }
 
         .header-title h1 {
-            font-size: 22px;
+            font-size: 20px;
             color: #1F3B8D;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             font-weight: bold;
         }
 
         .header-title p {
-            font-size: 12px;
+            font-size: 11px;
             color: #FF621B;
             font-weight: bold;
         }
@@ -87,51 +87,65 @@
         }
 
         .cover-content {
-            padding: 80px 60px;
+            padding: 60px 50px;
         }
 
         .cover-logo {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .cover-logo img {
-            width: 200px;
+            width: 180px;
             height: auto;
         }
 
         .cover-title {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: #FF621B;
         }
 
         .cover-subtitle {
-            font-size: 20px;
-            margin-bottom: 50px;
+            font-size: 18px;
+            margin-bottom: 40px;
             color: #FEFFFF;
         }
 
         .cover-tagline {
-            font-size: 28px;
+            font-size: 24px;
             color: #FF621B;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .cover-tagline-sub {
+            font-size: 24px;
+            color: #FEFFFF;
             margin-bottom: 30px;
             font-weight: bold;
         }
 
         .cover-description {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.8;
-            max-width: 500px;
-            margin: 0 auto 50px;
+            max-width: 480px;
+            margin: 0 auto 20px;
             color: #FEFFFF;
+        }
+
+        .cover-highlight {
+            font-size: 14px;
+            color: #FF621B;
+            font-weight: bold;
+            margin-bottom: 40px;
         }
 
         .cover-cta {
             background: #FF621B;
             color: white;
-            padding: 15px 40px;
-            font-size: 16px;
+            padding: 14px 35px;
+            font-size: 15px;
             font-weight: bold;
             display: inline-block;
             border-radius: 5px;
@@ -139,53 +153,53 @@
 
         .cover-footer {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 0;
             right: 0;
-            font-size: 11px;
+            font-size: 10px;
             color: rgba(255,255,255,0.8);
         }
 
         /* Section Titles */
         h2 {
-            font-size: 18px;
+            font-size: 16px;
             color: #1F3B8D;
-            margin-bottom: 12px;
-            padding-bottom: 5px;
+            margin-bottom: 10px;
+            padding-bottom: 4px;
             border-bottom: 2px solid #FF621B;
         }
 
         h3 {
-            font-size: 14px;
+            font-size: 13px;
             color: #1F3B8D;
-            margin-bottom: 8px;
-            margin-top: 15px;
+            margin-bottom: 6px;
+            margin-top: 12px;
         }
 
         h4 {
-            font-size: 12px;
+            font-size: 11px;
             color: #FF621B;
-            margin-bottom: 5px;
-            margin-top: 10px;
+            margin-bottom: 4px;
+            margin-top: 8px;
         }
 
         /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 12px 0;
+            margin: 10px 0;
         }
 
         table th {
             background: #1F3B8D;
             color: white;
-            padding: 10px;
+            padding: 8px;
             text-align: left;
-            font-size: 11px;
+            font-size: 10px;
         }
 
         table td {
-            padding: 8px 10px;
+            padding: 7px 8px;
             border-bottom: 1px solid #ddd;
             font-size: 10px;
         }
@@ -198,8 +212,8 @@
         .highlight-box {
             background: #FFF5F0;
             border-left: 4px solid #FF621B;
-            padding: 15px;
-            margin: 15px 0;
+            padding: 12px;
+            margin: 12px 0;
         }
 
         .highlight-box.blue {
@@ -217,46 +231,47 @@
             display: table-cell;
             width: 48%;
             vertical-align: top;
-            padding-right: 15px;
+            padding-right: 12px;
         }
 
         .column:last-child {
             padding-right: 0;
-            padding-left: 15px;
+            padding-left: 12px;
         }
 
         /* Lists */
         ul {
-            margin: 8px 0;
-            padding-left: 20px;
+            margin: 6px 0;
+            padding-left: 18px;
         }
 
         ul li {
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         /* Process Steps */
         .process-step {
             display: table;
             width: 100%;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .step-number {
             display: table-cell;
-            width: 30px;
-            height: 30px;
+            width: 26px;
+            height: 26px;
             background: #FF621B;
             color: white;
             text-align: center;
             vertical-align: middle;
             font-weight: bold;
+            font-size: 11px;
             border-radius: 50%;
         }
 
         .step-content {
             display: table-cell;
-            padding-left: 12px;
+            padding-left: 10px;
             vertical-align: middle;
         }
 
@@ -265,82 +280,118 @@
             color: #1F3B8D;
         }
 
-        /* Ideas Grid */
-        .ideas-grid {
+        /* Ideas List */
+        .ideas-list {
             display: table;
             width: 100%;
         }
 
-        .idea-item {
+        .ideas-column {
             display: table-cell;
             width: 50%;
-            padding: 8px;
             vertical-align: top;
+            padding-right: 10px;
         }
 
-        .idea-number {
-            display: inline-block;
-            width: 22px;
-            height: 22px;
-            background: #FF621B;
-            color: white;
-            text-align: center;
-            border-radius: 50%;
+        .ideas-column:last-child {
+            padding-right: 0;
+            padding-left: 10px;
+        }
+
+        .idea-item {
+            padding: 4px 0;
+            border-bottom: 1px dotted #ddd;
             font-size: 10px;
-            line-height: 22px;
-            margin-right: 8px;
+        }
+
+        .idea-bullet {
+            color: #FF621B;
+            font-weight: bold;
+            margin-right: 5px;
         }
 
         /* Contact Section */
         .contact-section {
             background: #1F3B8D;
             color: white;
-            padding: 25px;
-            margin-top: 20px;
+            padding: 20px;
+            margin-top: 15px;
             text-align: center;
         }
 
         .contact-section h2 {
             color: #FF621B;
             border-bottom: none;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .contact-grid {
             display: table;
             width: 100%;
-            margin-top: 15px;
+            margin-top: 12px;
         }
 
         .contact-item {
             display: table-cell;
             width: 25%;
             text-align: center;
-            padding: 10px;
+            padding: 8px;
         }
 
         .contact-label {
-            font-size: 10px;
+            font-size: 9px;
             color: #FF621B;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .contact-value {
-            font-size: 11px;
+            font-size: 10px;
             color: white;
         }
 
-        /* Footer */
-        .page-footer {
-            position: fixed;
-            bottom: 20px;
-            left: 50px;
-            right: 50px;
+        /* Stats */
+        .stats-row {
+            display: table;
+            width: 100%;
+            margin: 12px 0;
+        }
+
+        .stat-item {
+            display: table-cell;
+            width: 25%;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .stat-number {
+            font-size: 22px;
+            font-weight: bold;
+            color: #FF621B;
+        }
+
+        .stat-label {
             font-size: 9px;
             color: #666;
-            text-align: center;
-            border-top: 1px solid #ddd;
-            padding-top: 10px;
+        }
+
+        /* Checkmark list */
+        .check-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .check-list li {
+            padding-left: 18px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .check-list li:before {
+            content: "\2713";
+            color: #FF621B;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         /* Comparison Table */
@@ -352,51 +403,6 @@
             background: #efe;
         }
 
-        /* Stats */
-        .stats-row {
-            display: table;
-            width: 100%;
-            margin: 15px 0;
-        }
-
-        .stat-item {
-            display: table-cell;
-            width: 25%;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .stat-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FF621B;
-        }
-
-        .stat-label {
-            font-size: 10px;
-            color: #666;
-        }
-
-        /* Checkmark list */
-        .check-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .check-list li {
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 6px;
-        }
-
-        .check-list li:before {
-            content: "\2713";
-            color: #FF621B;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
         .small-text {
             font-size: 9px;
             color: #666;
@@ -406,10 +412,21 @@
             text-align: center;
         }
 
-        .mb-10 { margin-bottom: 10px; }
+        .mb-8 { margin-bottom: 8px; }
+        .mb-12 { margin-bottom: 12px; }
         .mb-15 { margin-bottom: 15px; }
-        .mb-20 { margin-bottom: 20px; }
-        .mt-15 { margin-top: 15px; }
+        .mt-10 { margin-top: 10px; }
+        .mt-12 { margin-top: 12px; }
+
+        .emphasis {
+            font-style: italic;
+            color: #666;
+        }
+
+        .bold-orange {
+            color: #FF621B;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -422,21 +439,26 @@
             </div>
 
             <div class="cover-title">STRATEGIC PARTNERSHIP OPPORTUNITY</div>
-            <div class="cover-subtitle">Build Together. Share Success. Grow Together.</div>
+            <div class="cover-subtitle">Build Together. Share Risk. Share Success.</div>
 
-            <div class="cover-tagline">YOUR IDEA + OUR TECHNOLOGY = SHARED SUCCESS</div>
+            <div class="cover-tagline">YOUR IDEA + OUR TECHNOLOGY</div>
+            <div class="cover-tagline-sub">= A SCALABLE BUSINESS</div>
 
             <div class="cover-description">
-                ZIMA Solutions Limited is actively seeking visionary partners with innovative business ideas
-                or projects that require technical expertise. We're offering a unique 50/50 partnership model
-                where we co-invest, co-build, and co-own transformative digital solutions.
+                <strong>ZIMA Solutions Limited</strong> invites visionary entrepreneurs, companies, and institutions to form <strong>true strategic partnerships</strong>.
+                If you have a strong business idea or a growing project that needs world-class technology, we offer a <strong>transparent 50/50 partnership</strong> to co-invest, co-build, and co-own high-impact digital solutions.
             </div>
 
-            <div class="cover-cta">Let's Build the Future Together</div>
+            <div class="cover-highlight">
+                This is not a vendor relationship.<br>
+                This is shared risk, shared ownership, and shared upside.
+            </div>
+
+            <div class="cover-cta">Let's Build Something That Lasts</div>
 
             <div class="cover-footer">
                 ZIMA Solutions Limited | TIN: 181-314-605 | Registered in Tanzania<br>
-                Build Your Future. Together.
+                Build the Future. Together.
             </div>
         </div>
     </div>
@@ -449,95 +471,96 @@
             </div>
             <div class="header-title">
                 <h1>THE PARTNERSHIP MODEL</h1>
-                <p>Equal Investment. Equal Ownership. Equal Returns.</p>
+                <p>Fair. Transparent. Aligned.</p>
             </div>
         </div>
 
         <table>
             <tr>
-                <th>What We Share</th>
-                <th>Your Contribution</th>
-                <th>ZIMA's Contribution</th>
+                <th>Area</th>
+                <th>You</th>
+                <th>ZIMA</th>
             </tr>
             <tr>
-                <td><strong>Ownership</strong></td>
-                <td style="text-align: center; font-weight: bold; color: #FF621B;">50%</td>
-                <td style="text-align: center; font-weight: bold; color: #FF621B;">50%</td>
+                <td><strong>Equity Ownership</strong></td>
+                <td style="text-align: center; font-weight: bold; color: #FF621B; font-size: 14px;">50%</td>
+                <td style="text-align: center; font-weight: bold; color: #FF621B; font-size: 14px;">50%</td>
             </tr>
             <tr>
-                <td><strong>Project Costs</strong></td>
-                <td style="text-align: center; font-weight: bold; color: #FF621B;">50%</td>
-                <td style="text-align: center; font-weight: bold; color: #FF621B;">50%</td>
+                <td><strong>Investment & Costs</strong></td>
+                <td style="text-align: center; font-weight: bold; color: #FF621B; font-size: 14px;">50%</td>
+                <td style="text-align: center; font-weight: bold; color: #FF621B; font-size: 14px;">50%</td>
             </tr>
             <tr>
                 <td><strong>Revenue & Profits</strong></td>
-                <td style="text-align: center; font-weight: bold; color: #FF621B;">50%</td>
-                <td style="text-align: center; font-weight: bold; color: #FF621B;">50%</td>
+                <td style="text-align: center; font-weight: bold; color: #FF621B; font-size: 14px;">50%</td>
+                <td style="text-align: center; font-weight: bold; color: #FF621B; font-size: 14px;">50%</td>
             </tr>
             <tr>
-                <td><strong>Decision Making</strong></td>
+                <td><strong>Strategic Decisions</strong></td>
                 <td style="text-align: center;">Joint</td>
                 <td style="text-align: center;">Joint</td>
             </tr>
         </table>
 
         <div class="highlight-box">
-            <strong style="color: #FF621B;">No Hidden Fees. No Complicated Terms. True Partnership.</strong>
+            <strong style="color: #FF621B;">No hidden charges. No vendor lock-in. No one-sided contracts.</strong><br>
+            Only long-term collaboration built on trust and results.
         </div>
 
-        <h2>WHAT ZIMA BRINGS TO THE TABLE</h2>
-        <h3>World-Class Technical Capabilities</h3>
-        <p><strong style="color: #FF621B;">26+ Proven Solutions</strong> across fintech, enterprise systems, and digital transformation:</p>
+        <h2>WHAT ZIMA BRINGS</h2>
+        <h3>Proven Technology. Real Execution.</h3>
+        <p>We have built and deployed <strong class="bold-orange">26+ production-ready solutions</strong> across fintech, enterprise, and public-sector systems.</p>
 
-        <div class="two-columns mt-15">
+        <div class="two-columns mt-10">
             <div class="column">
-                <h4>Financial Technology Expertise</h4>
+                <h4>Financial Technology & Payments</h4>
                 <ul>
                     <li>Bank of Tanzania integrations (RTGS, TIPS, GePG)</li>
-                    <li>Payment gateway development</li>
-                    <li>Loan management systems</li>
+                    <li>Payment gateways & merchant systems</li>
+                    <li>Loan & credit management platforms</li>
                     <li>Mobile money integrations (M-Pesa, Airtel, Tigo)</li>
-                    <li>TanQR merchant systems</li>
+                    <li>TanQR merchant & payment solutions</li>
                 </ul>
 
-                <h4>Enterprise Systems</h4>
+                <h4>Enterprise & Business Systems</h4>
                 <ul>
-                    <li>ERP & business management platforms</li>
-                    <li>HR & payroll systems</li>
-                    <li>Inventory & asset management</li>
-                    <li>Document management with e-signatures</li>
+                    <li>ERP & Business Management Systems</li>
+                    <li>HR, Payroll & Compliance platforms</li>
+                    <li>Inventory, procurement & asset management</li>
+                    <li>Secure document management with e-signatures</li>
                 </ul>
             </div>
             <div class="column">
-                <h4>Sector-Specific Solutions</h4>
+                <h4>Sector-Focused Platforms</h4>
                 <ul>
-                    <li>Healthcare facility management</li>
-                    <li>School management systems</li>
-                    <li>Agricultural financing platforms</li>
-                    <li>SACCOS & microfinance systems</li>
-                    <li>VICOBA digitization</li>
+                    <li>Healthcare & clinic management systems</li>
+                    <li>School & education management solutions</li>
+                    <li>Agricultural financing & farmer platforms</li>
+                    <li>SACCOS, MFI & VICOBA digitization</li>
+                    <li>Cooperative & member-based systems</li>
                 </ul>
 
-                <h4>Cutting-Edge Technology</h4>
+                <h4>Advanced & Emerging Technology</h4>
                 <ul>
                     <li>AI-powered virtual assistants (Zona AI)</li>
-                    <li>API gateway & open banking platforms</li>
-                    <li>Real-time notification engines</li>
-                    <li>Cloud-native architectures</li>
+                    <li>API gateways & open banking platforms</li>
+                    <li>Real-time messaging & notification engines</li>
+                    <li>Secure, cloud-native architectures</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- Page 3: Why Partner & Track Record -->
+    <!-- Page 3: Why ZIMA & Ideal Partners -->
     <div class="page">
         <div class="header">
             <div class="header-logo">
                 <img src="{{ public_path('vf/zim2a.png') }}" alt="ZIMA">
             </div>
             <div class="header-title">
-                <h1>WHY PARTNER WITH ZIMA?</h1>
-                <p>Proven Track Record & Experienced Team</p>
+                <h1>WHY ZIMA?</h1>
+                <p>Results You Can Trust</p>
             </div>
         </div>
 
@@ -548,190 +571,190 @@
             </div>
             <div class="stat-item">
                 <div class="stat-number">20+</div>
-                <div class="stat-label">Enterprise Projects</div>
+                <div class="stat-label">Enterprise Systems Live</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">99.9%</div>
-                <div class="stat-label">System Uptime</div>
+                <div class="stat-label">Uptime Infrastructure</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">24/7</div>
-                <div class="stat-label">Technical Support</div>
+                <div class="stat-label">Support & Monitoring</div>
             </div>
         </div>
-
-        <h3>Experienced Leadership Team</h3>
-        <table>
-            <tr>
-                <th>Role</th>
-                <th>Name</th>
-                <th>Expertise</th>
-            </tr>
-            <tr>
-                <td><strong>CEO</strong></td>
-                <td>Andrew Mashamba</td>
-                <td>Strategic leadership, innovation, partnerships</td>
-            </tr>
-            <tr>
-                <td><strong>Finance & Operations</strong></td>
-                <td>Caroline Ceasar Shija</td>
-                <td>Financial planning, compliance, operations</td>
-            </tr>
-            <tr>
-                <td><strong>Technical Officer</strong></td>
-                <td>Simon Mpembee</td>
-                <td>Software architecture, system integrations</td>
-            </tr>
-            <tr>
-                <td><strong>Business Development</strong></td>
-                <td>Khafsa Hassan Lulela</td>
-                <td>Client relations, market development</td>
-            </tr>
-        </table>
 
         <h3>Technical Excellence</h3>
         <ul class="check-list">
-            <li>Full-stack development capabilities</li>
-            <li>Bank-grade security standards</li>
-            <li>BOT regulatory compliance expertise</li>
-            <li>Agile development methodology</li>
-            <li>Continuous support & maintenance</li>
+            <li>Full-stack & scalable architectures</li>
+            <li>Bank-grade security & compliance</li>
+            <li>Regulatory experience (BOT & financial systems)</li>
+            <li>Agile development & continuous improvement</li>
+            <li>Long-term maintenance & support</li>
         </ul>
 
-        <h2 class="mt-15">IDEAL PARTNER PROFILE</h2>
+        <h2 class="mt-12">IDEAL PARTNERS</h2>
 
         <div class="two-columns">
             <div class="column">
-                <h4>Business Visionaries with:</h4>
+                <h4>Entrepreneurs & Visionaries who have:</h4>
                 <ul>
-                    <li>Validated market opportunities in Tanzania or East Africa</li>
-                    <li>Clear problem-solution fit</li>
-                    <li>Domain expertise in their industry</li>
-                    <li>Commitment to long-term growth</li>
+                    <li>A validated market need in Tanzania or East Africa</li>
+                    <li>Clear problem-solution alignment</li>
+                    <li>Industry knowledge and execution capacity</li>
+                    <li>Long-term growth mindset</li>
                 </ul>
             </div>
             <div class="column">
-                <h4>Companies with:</h4>
+                <h4>Companies & Institutions that:</h4>
                 <ul>
-                    <li>Projects requiring technical development</li>
-                    <li>Existing customer base needing digital solutions</li>
-                    <li>Products ready for scale but lacking tech capacity</li>
-                    <li>Ideas aligned with digital transformation trends</li>
+                    <li>Have strong ideas but limited technical capacity</li>
+                    <li>Need to digitize existing services or customers</li>
+                    <li>Want to scale without outsourcing ownership</li>
+                    <li>Believe in shared-value partnerships</li>
                 </ul>
             </div>
         </div>
 
-        <div class="highlight-box blue mt-15">
+        <div class="highlight-box blue mt-12">
             <strong>Priority Sectors:</strong> Financial Services & Fintech | Healthcare & Healthtech | Education & Edtech | Agriculture & Agritech | Government & Civic Tech | Retail & E-commerce | Real Estate & Property Management | Logistics & Supply Chain
+        </div>
+
+        <h2 class="mt-12">HOW WE WORK TOGETHER</h2>
+        <h3>Simple. Structured. Effective.</h3>
+
+        <div class="two-columns mt-10">
+            <div class="column">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <span class="step-title">CONNECT</span> - Share your idea or project
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <span class="step-title">EVALUATE</span> - Joint feasibility & market assessment
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <span class="step-title">AGREE</span> - Clear partnership & ownership terms
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <span class="step-title">BUILD</span> - Co-invest and co-develop
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <span class="step-title">LAUNCH</span> - Go to market together
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <span class="step-title">SCALE</span> - Grow, optimize, and expand
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Page 4: Process & Opportunities -->
+    <!-- Page 4: Ideas & Comparison -->
     <div class="page">
         <div class="header">
             <div class="header-logo">
                 <img src="{{ public_path('vf/zim2a.png') }}" alt="ZIMA">
             </div>
             <div class="header-title">
-                <h1>PARTNERSHIP PROCESS</h1>
-                <p>Simple. Transparent. Efficient.</p>
+                <h1>PARTNERSHIP IDEAS</h1>
+                <p>We're Ready to Build</p>
             </div>
         </div>
 
-        <div class="mb-20">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <span class="step-title">CONNECT</span> - Share your idea or project with us
-                </div>
+        <div class="ideas-list">
+            <div class="ideas-column">
+                <div class="idea-item"><span class="idea-bullet">></span> Digital lending platforms</div>
+                <div class="idea-item"><span class="idea-bullet">></span> Healthcare appointment & payment systems</div>
+                <div class="idea-item"><span class="idea-bullet">></span> School fees & parent engagement platforms</div>
+                <div class="idea-item"><span class="idea-bullet">></span> Farmer-to-marketplace solutions</div>
+                <div class="idea-item"><span class="idea-bullet">></span> Event ticketing & management systems</div>
             </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <span class="step-title">EVALUATE</span> - Joint assessment of feasibility & market potential
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <span class="step-title">AGREE</span> - Sign partnership agreement with clear terms
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <span class="step-title">BUILD</span> - Co-develop the solution with shared resources
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">5</div>
-                <div class="step-content">
-                    <span class="step-title">LAUNCH</span> - Go to market together
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">6</div>
-                <div class="step-content">
-                    <span class="step-title">GROW</span> - Scale and share the success equally
-                </div>
+            <div class="ideas-column">
+                <div class="idea-item"><span class="idea-bullet">></span> Property rental & management platforms</div>
+                <div class="idea-item"><span class="idea-bullet">></span> Fleet & transport management systems</div>
+                <div class="idea-item"><span class="idea-bullet">></span> Restaurant & hospitality POS</div>
+                <div class="idea-item"><span class="idea-bullet">></span> Cooperative & savings group platforms</div>
+                <div class="idea-item"><span class="idea-bullet">></span> Freelancer & talent marketplaces</div>
             </div>
         </div>
 
-        <h2>READY-TO-BUILD IDEAS WE'RE EXCITED ABOUT</h2>
-
-        <table>
-            <tr>
-                <td><span class="idea-number">1</span> <strong>Digital Lending Platform</strong> for underserved markets</td>
-                <td><span class="idea-number">2</span> <strong>Healthcare Appointment & Payment System</strong> for clinics</td>
-            </tr>
-            <tr>
-                <td><span class="idea-number">3</span> <strong>School Fees Collection Platform</strong> with parent engagement</td>
-                <td><span class="idea-number">4</span> <strong>Farmer Marketplace</strong> connecting producers to buyers</td>
-            </tr>
-            <tr>
-                <td><span class="idea-number">5</span> <strong>Event Ticketing & Management Platform</strong></td>
-                <td><span class="idea-number">6</span> <strong>Property Rental Platform</strong> for Tanzania</td>
-            </tr>
-            <tr>
-                <td><span class="idea-number">7</span> <strong>Fleet Management System</strong> for transport companies</td>
-                <td><span class="idea-number">8</span> <strong>Restaurant & Hospitality POS System</strong></td>
-            </tr>
-            <tr>
-                <td><span class="idea-number">9</span> <strong>Cooperative Management Platform</strong> for savings groups</td>
-                <td><span class="idea-number">10</span> <strong>Freelancer Marketplace</strong> for East Africa</td>
-            </tr>
-        </table>
-
-        <div class="highlight-box text-center">
-            <strong style="color: #FF621B; font-size: 14px;">Have a different idea? We want to hear it!</strong>
+        <div class="highlight-box text-center mt-12">
+            <strong style="color: #FF621B; font-size: 12px;">Have another idea? We are open and ready.</strong>
         </div>
 
-        <h2 class="mt-15">TRADITIONAL VENDOR VS. ZIMA PARTNERSHIP</h2>
+        <h2 class="mt-12">WHAT MAKES THIS DIFFERENT</h2>
+        <h3>Vendor Model vs Strategic Partnership</h3>
 
         <table class="comparison-table">
             <tr>
-                <th style="background: #dc3545;">Traditional Approach</th>
+                <th style="background: #dc3545;">Traditional Vendor</th>
                 <th style="background: #28a745;">ZIMA Partnership</th>
             </tr>
             <tr>
-                <td>You pay 100% upfront</td>
-                <td>We share costs 50/50</td>
+                <td>You pay everything</td>
+                <td>We co-invest 50/50</td>
             </tr>
             <tr>
-                <td>Vendor profits, you take risk</td>
-                <td>We share risk AND reward</td>
+                <td>Vendor delivers & exits</td>
+                <td>We stay and grow</td>
             </tr>
             <tr>
-                <td>Limited commitment post-delivery</td>
-                <td>We're invested in long-term success</td>
+                <td>One-sided risk</td>
+                <td>Shared risk & reward</td>
             </tr>
             <tr>
-                <td>You own, they disappear</td>
-                <td>Joint ownership, ongoing collaboration</td>
+                <td>Fixed scope</td>
+                <td>Flexible, evolving</td>
             </tr>
             <tr>
-                <td>Fixed scope, change = more cost</td>
-                <td>Flexible, evolving together</td>
+                <td>You own alone</td>
+                <td>We build together</td>
+            </tr>
+        </table>
+
+        <h2 class="mt-12">OUR SUCCESS TARGETS</h2>
+
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Target</th>
+            </tr>
+            <tr>
+                <td><strong>Revenue</strong></td>
+                <td>Sustainable recurring revenue streams</td>
+            </tr>
+            <tr>
+                <td><strong>Users</strong></td>
+                <td>Thousands of active users across Tanzania</td>
+            </tr>
+            <tr>
+                <td><strong>Efficiency</strong></td>
+                <td>40-60% operational efficiency gains</td>
+            </tr>
+            <tr>
+                <td><strong>Satisfaction</strong></td>
+                <td>Above industry NPS scores</td>
+            </tr>
+            <tr>
+                <td><strong>Scalability</strong></td>
+                <td>Systems built to scale <strong>10x and beyond</strong></td>
             </tr>
         </table>
     </div>
@@ -743,42 +766,13 @@
                 <img src="{{ public_path('vf/zim2a.png') }}" alt="ZIMA">
             </div>
             <div class="header-title">
-                <h1>LET'S BUILD THE FUTURE TOGETHER</h1>
-                <p>Ready to Partner?</p>
+                <h1>LET'S BUILD SOMETHING THAT LASTS</h1>
+                <p>Contact ZIMA Solutions Limited</p>
             </div>
         </div>
 
-        <h2>SUCCESS METRICS WE TARGET</h2>
-
-        <table>
-            <tr>
-                <th>Metric</th>
-                <th>Target</th>
-            </tr>
-            <tr>
-                <td><strong>Revenue Growth</strong></td>
-                <td>Build solutions that generate sustainable income</td>
-            </tr>
-            <tr>
-                <td><strong>Market Impact</strong></td>
-                <td>Reach thousands of users across Tanzania</td>
-            </tr>
-            <tr>
-                <td><strong>Operational Efficiency</strong></td>
-                <td>40-60% reduction in manual processes</td>
-            </tr>
-            <tr>
-                <td><strong>Customer Satisfaction</strong></td>
-                <td>NPS scores above industry average</td>
-            </tr>
-            <tr>
-                <td><strong>Scalability</strong></td>
-                <td>Solutions built to grow 10x</td>
-            </tr>
-        </table>
-
         <div class="contact-section">
-            <h2>CONTACT ZIMA SOLUTIONS LIMITED TODAY</h2>
+            <h2>GET IN TOUCH</h2>
 
             <div class="contact-grid">
                 <div class="contact-item">
@@ -800,35 +794,38 @@
             </div>
         </div>
 
-        <h3 class="mt-15">Next Steps:</h3>
-        <div class="process-step">
+        <h3 class="mt-12">Next Steps:</h3>
+        <div class="process-step mb-8">
             <div class="step-number">1</div>
-            <div class="step-content"><strong>Email us</strong> your idea or project brief</div>
+            <div class="step-content"><strong>Send us</strong> your idea or project brief</div>
         </div>
-        <div class="process-step">
+        <div class="process-step mb-8">
             <div class="step-number">2</div>
-            <div class="step-content"><strong>Schedule a call</strong> to discuss the opportunity</div>
+            <div class="step-content"><strong>Schedule</strong> a strategy discussion</div>
         </div>
-        <div class="process-step">
+        <div class="process-step mb-8">
             <div class="step-number">3</div>
-            <div class="step-content"><strong>Meet our team</strong> for a detailed partnership discussion</div>
+            <div class="step-content"><strong>Meet the team</strong> and define the partnership</div>
         </div>
 
-        <div class="highlight-box blue mt-15">
-            <strong>CONFIDENTIALITY ASSURED</strong><br>
-            All ideas and discussions are treated with strict confidentiality. We're happy to sign NDAs before detailed conversations.
+        <div class="highlight-box blue mt-12">
+            <strong>CONFIDENTIALITY GUARANTEED</strong><br>
+            All discussions are treated with strict confidentiality. NDAs can be signed before detailed disclosures.
         </div>
 
         <div class="text-center mt-15" style="padding: 20px; background: #f8f9fa; border-radius: 5px;">
-            <p style="font-style: italic; color: #1F3B8D; font-size: 14px; margin-bottom: 10px;">
-                "Innovation thrives when visionaries and builders unite.<br>Let's create something remarkable together."
+            <p style="font-style: italic; color: #1F3B8D; font-size: 13px; margin-bottom: 8px;">
+                Innovation succeeds when vision meets execution.
             </p>
-            <p style="font-weight: bold; color: #FF621B;">— ZIMA Solutions Limited</p>
+            <p style="font-weight: bold; color: #FF621B; font-size: 14px;">
+                Let's build meaningful businesses together.
+            </p>
+            <p style="font-weight: bold; color: #1F3B8D; margin-top: 10px;">— ZIMA Solutions Limited</p>
         </div>
 
-        <div class="text-center mt-15 small-text">
+        <div class="text-center mt-12 small-text">
             <strong>TIN:</strong> 181-314-605 | <strong>Registered in Tanzania</strong><br>
-            <span style="color: #FF621B; font-weight: bold;">Build Your Future. Together.</span>
+            <span style="color: #FF621B; font-weight: bold; font-size: 11px;">Build the Future. Together.</span>
         </div>
     </div>
 
