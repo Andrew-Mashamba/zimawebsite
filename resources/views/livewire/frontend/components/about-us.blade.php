@@ -1,268 +1,352 @@
 <div>
-
     <style>
-        .gradient-container {
-            background: linear-gradient(
-                to bottom right,
-                #FF5E14 0%,
-                rgba(255, 255, 255, 1) 18%,
-                rgba(255, 255, 255, 1) 25%,
-                rgba(255, 255, 255, 1) 50%,
-                rgba(255, 255, 255, 1) 75%,
-                rgba(255, 255, 255, 1) 100%
-            );
+        /* About Section - ZIMA Brand */
+        .about-gradient {
+            background: linear-gradient(to bottom right, #FF621B 0%, #ffffff 15%, #ffffff 100%);
         }
 
-        .parent {
-            width: 100vw;
-            margin-top:3px;
-
+        .about-section {
+            padding: 80px 0;
         }
 
-        .child {
-            margin: 0 auto; /* Centers the child horizontally */
+        .section-label {
+            color: #FF621B;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            margin-bottom: 10px;
         }
 
+        .section-title {
+            color: #1F3B8D;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 42px;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
 
+        .section-description {
+            color: #2c3e50;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .highlight-text {
+            color: #1F3B8D;
+            font-weight: 600;
+        }
+
+        /* Value Props */
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 3px solid #FF621B;
+        }
+
+        .value-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(31, 59, 141, 0.1);
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: linear-gradient(135deg, #1F3B8D, #3559af);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .value-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;
+        }
+
+        .value-content h4 {
+            color: #1F3B8D;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .value-content p {
+            color: #6B7280;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, #1F3B8D, #2a4a9e);
+            border-radius: 16px;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .stat-number {
+            font-family: 'Roboto Slab', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #FF621B;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        /* Leadership Section */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .leader-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 3px solid #1F3B8D;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(31, 59, 141, 0.15);
+        }
+
+        .leader-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1F3B8D, #FF621B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-family: 'Roboto Slab', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .leader-name {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: #1F3B8D;
+            margin-bottom: 5px;
+        }
+
+        .leader-title {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 13px;
+            color: #FF621B;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .leader-desc {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 13px;
+            color: #6B7280;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 992px) {
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .leadership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+        }
     </style>
 
-    <link rel='stylesheet' id='bridge-style-handle-google-fonts-css' href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic%7CYantramanav%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='bridge-core-dashboard-style-css' href='https://bridge510.qodeinteractive.com/wp-content/plugins/bridge-core/modules/core-dashboard/assets/css/core-dashboard.min.css?ver=6.7.1' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-frontend-css' href='https://bridge510.qodeinteractive.com/wp-content/uploads/elementor/css/custom-frontend-lite.min.css?ver=1707226491' type='text/css' media='all' />
-    <link rel='stylesheet' id='swiper-css' href='https://bridge510.qodeinteractive.com/wp-content/plugins/qi-blocks/inc/slider/assets/plugins/5.4.5/swiper.min.css?ver=6.7.1' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-post-4-css' href='https://bridge510.qodeinteractive.com/wp-content/uploads/elementor/css/post-4.css?ver=1707226491' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-global-css' href='https://bridge510.qodeinteractive.com/wp-content/uploads/elementor/css/global.css?ver=1707226491' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-post-6815-css' href='https://bridge510.qodeinteractive.com/wp-content/uploads/elementor/css/post-6815.css?ver=1707729978' type='text/css' media='all' />
-    <link rel='stylesheet' id='qi-blocks-google-fonts-css' href='https://fonts.googleapis.com/css?family=Yantramanav%3A400&#038;subset&#038;display=swap&#038;ver=1.0.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CYantramanav%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.7.1' type='text/css' media='all' />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script type="text/javascript" src="https://bridge510.qodeinteractive.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-    <script type="text/javascript" src="https://bridge510.qodeinteractive.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+    <section class="about-gradient" aria-label="About ZIMA Solutions Limited">
+        <div class="about-section" style="max-width: 1400px; margin: 0 auto; padding: 80px 40px;">
 
-    <div class="parent gradient-container ">
+            <!-- Section Header -->
+            <header style="margin-bottom: 50px;">
+                <p class="section-label">Who We Are</p>
+                <h2 class="section-title">Transforming Digital Futures</h2>
+            </header>
 
-        <div class="child full_width_inner" style="background-color : redc;" >
-            <div data-elementor-type="wp-page" data-elementor-id="6815" class="elementor elementor-6815">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <!-- Left Column: Description -->
+                <div>
+                    <p class="section-description">
+                        <span class="highlight-text">Zima Solutions Limited</span> is a forward-thinking technology and business innovation company specializing in digital transformation for financial institutions, government agencies, and enterprises.
+                    </p>
+                    <p class="section-description">
+                        We design and implement <span class="highlight-text">secure, scalable, and intelligent systems</span> that drive operational efficiency, compliance, and superior customer experience.
+                    </p>
+                    <p class="section-description">
+                        Our focus is to empower organizations through automation, data-driven decision-making, and digital inclusion, helping clients achieve sustainable growth in an evolving digital economy.
+                    </p>
 
+                    <a href="#contact" style="display: inline-block; margin-top: 20px; padding: 14px 32px; background: #FF621B; color: #fff; text-decoration: none; border-radius: 50px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600; transition: all 0.3s ease;">
+                        Partner With Us
+                    </a>
+                </div>
 
-                <div class="elementor-element elementor-element-d704a67 e-con-full qode_elementor_container_inner e-flex parallax_section_no e-con e-parent" data-id="d704a67" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}" data-core-v316-plus="true">
-                    <div class="elementor-element elementor-element-520da8e elementor-widget elementor-widget-text-editor" data-id="520da8e" data-element_type="widget" data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <style>/*! elementor - v3.19.0 - 29-01-2024 */
-                                .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#69727d;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed
-                                .elementor-drop-cap{color:#69727d;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default)
-                                 .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor
-                                  .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}
-                            </style>
-                            <h1>About Us</h1>
+                <!-- Right Column: Value Props -->
+                <div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="value-content">
+                            <h4>Enterprise Integration</h4>
+                            <p>Seamless connectivity with RTGS, TIPS, GePG, and mobile money platforms for real-time transactions.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <div class="value-content">
+                            <h4>Regulatory Compliance</h4>
+                            <p>BOT-compliant reporting systems with automated real-time supervisory information.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div class="value-content">
+                            <h4>Automation & AI</h4>
+                            <p>AI-powered solutions for customer support, predictive analytics, and intelligent decision-making.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <div class="value-content">
+                            <h4>Digital Inclusion</h4>
+                            <p>VICOBA integration and microfinance solutions connecting unbanked populations to formal banking.</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="elementor-element elementor-element-9b7346b e-con-full qode_elementor_container_inner e-flex parallax_section_no e-con e-parent" data-id="9b7346b" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-core-v316-plus="true">
-
-                    <div class="elementor-element elementor-element-cd4147b e-flex e-con-boxed parallax_section_no qode_elementor_container_no e-con e-child" data-id="cd4147b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;}">
-                        <div class="e-con-inner" style="background-color : yellowj;">
-
-                            <div class="elementor-element elementor-element-5ee2962 elementor-widget elementor-widget-text-editor" data-id="5ee2962" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <h2 class="mkdf-st-title">Company Overview</h2>
-                                </div>
-                            </div>
-
-                            <style>
-
-                                ul {
-                                    list-style: none;
-                                    padding: 0;
-                                    margin: 0;
-                                }
-                                li {
-                                    display: flex;
-                                    align-items: start;
-                                    margin-bottom: 15px;
-                                }
-                                .icon {
-                                    width: 24px;
-                                    height: 24px;
-                                    margin-right: 10px;
-                                    color: #007BFF;
-                                }
-                            </style>
-
-                            <div style="background-color : bluev; display: block; width: 100%; " class="elementor-element elementor-element-117a539 elementor-widget__width-initialx elementor-widget elementor-widget-heading" data-id="117a539" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-containerx" style="background-color : greenb;">
-                                    <style>/*! elementor - v3.19.0 - 29-01-2024 */
-                                        .elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style>
-
-                                    <section class="elementor-heading-title elementor-size-defaultx" style="background-color : redv;">
-
-                                        <p>VisionFund Tanzania is owned by VisionFund International, World Vision’s microfinance subsidiary. VisionFund International is differentiated by its integrated approach in working with World Vision’s community-based development efforts to address rural poverty.</p>
-
-                                        <p>VisionFund Tanzania (VFT) is currently the fourth largest and the most rapidly growing Microfinance Institution (MFI) in Tanzania. It also has the highest quality portfolio, some of the most efficient operations (second lowest cost per borrower) and is solidly self-sustainable. VisionFund Tanzania is further characterised by a strong reputation in the marketplace for integrity and client care, as well as the quality of its board and senior management.</p>
-
-                                        <h4 style="margin-top : 50px; ">Our Vision and Future Plans</h4>
-                                        <p>To enable VFT to scale substantially in the areas of greatest need and have a greater future impact, we are:</p>
-                                        <ul>
-                                            <li>
-                                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#F45C00">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                <span>Converting to a regulated deposit-taking institution to promote a culture of saving and responsible borrowing while providing a safe place for low-income individuals to save.</span>
-                                            </li>
-                                            <li>
-                                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#F45C00">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                <span>Expanding services to underserved rural areas where financial services are scarce and the need is greatest.</span>
-                                            </li>
-                                            <li>
-                                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#F45C00">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                <span>Introducing an innovative tablet-based platform for faster, more efficient, and fraud-resistant financial service delivery, reducing administrative costs and expanding outreach.</span>
-                                            </li>
-                                            <li>
-                                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#F45C00">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                <span>Providing training in financial literacy, business fundamentals, and Judeo-Christian values to empower communities.</span>
-                                            </li>
-                                        </ul>
-
-                                        <h4 style="margin-top : 50px; ">Technology and Innovation</h4>
-                                        <p>Technology plays a big part of how we reach and service our clients. VFT recently upgraded to the latest version of the Temenos T24 Community Banking platform. By upgrading, VFT will enable a more seamless integration with the tablet-based platform, which will lend itself to efficiencies for our clients.</p>
-                                    </section>
-
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: 1px; margin-top : 50px;"
-                     class="elementor-element elementor-element-d6a2c53 e-con-fullx qode_elementor_container_inner e-flex parallax_section_no e-con e-parent">
-
-
-                    <div style="display: flex; gap: 1px;  width: 33%;">
-
-                        <div style="width: 40%; " class="" >
-                            <div class="elementor-element elementor-element-7335dd5 elementor-widget-mobile__width-auto elementor-widget elementor-widget-bridge_pie_chart" data-id="7335dd5" data-element_type="widget" data-widget_type="bridge_pie_chart.default">
-                                <div class="elementor-widget-container">
-                                    <div class="q_pie_chart_holder"><div class="q_percentage" data-percent="78" data-linewidth="4" data-active="#FF5E14" data-noactive="#F2F3F5" style="color:#001659;font-size:60px;font-weight:600;"><span class="tocounter">78</span>%</div><div class="pie_chart_text"></div></div>		</div>
-                            </div>
-                        </div>
-
-
-                        <div style="width: 60%; margin-left: 15px;" class="elementor-element elementor-element-829831e e-con-full e-flex parallax_section_no qode_elementor_container_no e-con e-child" data-id="829831e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                            <div class="elementor-element elementor-element-aa8d70b elementor-widget elementor-widget-text-editor" data-id="aa8d70b" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <h6 class="mkdf-st-title">Female</h6>						</div>
-                            </div>
-                            <div style="margin-topv : -20px" class="elementor-element elementor-element-d0b27ff elementor-widget elementor-widget-text-editor" data-id="d0b27ff" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-1a37a8c elementor-widget elementor-widget-heading" data-id="1a37a8c" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h3 class="elementor-heading-title elementor-size-default">Clients</h3>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-c93a6a0 elementor-widget elementor-widget-text-editor" data-id="c93a6a0" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <p class="mkdf-st-title">Number of female clients we have served.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-
-                    <div style="display: flex; gap: 1px;  width: 33%;">
-
-                        <div style="width: 40%; " class="" >
-                            <div class="elementor-element elementor-element-7335dd5 elementor-widget-mobile__width-auto elementor-widget elementor-widget-bridge_pie_chart" data-id="7335dd5" data-element_type="widget" data-widget_type="bridge_pie_chart.default">
-                                <div class="elementor-widget-container">
-                                    <div class="q_pie_chart_holder"><div class="q_percentage" data-percent="22" data-linewidth="4" data-active="#FF5E14" data-noactive="#F2F3F5" style="color:#001659;font-size:60px;font-weight:600;"><span class="tocounter">22</span>%</div><div class="pie_chart_text"></div></div>		</div>
-                            </div>
-                        </div>
-
-
-                        <div style="width: 60%; margin-left: 15px;" class="elementor-element elementor-element-829831e e-con-full e-flex parallax_section_no qode_elementor_container_no e-con e-child" data-id="829831e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                            <div class="elementor-element elementor-element-aa8d70b elementor-widget elementor-widget-text-editor" data-id="aa8d70b" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <h6 class="mkdf-st-title">MALE</h6>						</div>
-                            </div>
-                            <div style="margin-topb : -20px" class="elementor-element elementor-element-d0b27ff elementor-widget elementor-widget-text-editor" data-id="d0b27ff" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-1a37a8c elementor-widget elementor-widget-heading" data-id="1a37a8c" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h3 class="elementor-heading-title elementor-size-default">Clients</h3>		</div>
-                            </div>
-                            <div class="elementor-element elementor-element-c93a6a0 elementor-widget elementor-widget-text-editor" data-id="c93a6a0" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <p class="mkdf-st-title">Number of male clients we have served.</p>						</div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-
-
-                    <div style="display: flex; gap: 1px;  width: 33%;">
-
-                        <div style="width: 40%; " class="" >
-                            <div class="elementor-element elementor-element-7335dd5 elementor-widget-mobile__width-auto elementor-widget elementor-widget-bridge_pie_chart" data-id="7335dd5" data-element_type="widget" data-widget_type="bridge_pie_chart.default">
-                                <div class="elementor-widget-container">
-                                    <div class="q_pie_chart_holder"><div class="q_percentage" data-percent="61" data-linewidth="4" data-active="#FF5E14" data-noactive="#F2F3F5" style="color:#001659;font-size:60px;font-weight:600;"><span class="tocounter">61</span>%</div><div class="pie_chart_text"></div></div>		</div>
-                            </div>
-                        </div>
-
-
-                        <div style="width: 60%; margin-left: 15px;" class="elementor-element elementor-element-829831e e-con-full e-flex parallax_section_no qode_elementor_container_no e-con e-child" data-id="829831e" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                            <div class="elementor-element elementor-element-aa8d70b elementor-widget elementor-widget-text-editor" data-id="aa8d70b" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <h6 class="mkdf-st-title">Rular</h6>						</div>
-                            </div>
-                            <div style="margin-topk : -20px" class="elementor-element elementor-element-d0b27ff elementor-widget elementor-widget-text-editor" data-id="d0b27ff" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-1a37a8c elementor-widget elementor-widget-heading" data-id="1a37a8c" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h3 class="elementor-heading-title elementor-size-default">Clients</h3>		</div>
-                            </div>
-                            <div class="elementor-element elementor-element-c93a6a0 elementor-widget elementor-widget-text-editor" data-id="c93a6a0" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <p class="mkdf-st-title">Number of rular clients we have served.</p>						</div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-
-
-
-
-
-                </div>
-
-
             </div>
 
+            <!-- Stats Section -->
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Enterprise Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Client Organizations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">BOT Integrations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">System Uptime</div>
+                </div>
+            </div>
+
+            <!-- Leadership Section -->
+            <aside style="margin-top: 80px;" aria-label="ZIMA Solutions Leadership Team">
+                <p class="section-label">Leadership Team</p>
+                <h3 class="section-title" style="font-size: 32px;">Driven by Excellence</h3>
+                <p class="section-description" style="max-width: 700px;">
+                    Led by a dynamic and experienced team that combines technical excellence, strategic insight, and operational efficiency to drive innovation and impact.
+                </p>
+
+                <div class="leadership-grid">
+                    <div class="leader-card">
+                        <div class="leader-avatar" aria-hidden="true">AM</div>
+                        <h4 class="leader-name">Andrew Mashamba</h4>
+                        <p class="leader-title">Founder & CEO</p>
+                        <p class="leader-desc">Strategic leadership, company direction, innovation, and client partnerships.</p>
+                    </div>
+
+                    <div class="leader-card">
+                        <div class="leader-avatar" aria-hidden="true">CS</div>
+                        <h4 class="leader-name">Caroline Ceasar Shija</h4>
+                        <p class="leader-title">Finance & Operations</p>
+                        <p class="leader-desc">Financial planning, budgeting, compliance, and operational efficiency.</p>
+                    </div>
+
+                    <div class="leader-card">
+                        <div class="leader-avatar" aria-hidden="true">SM</div>
+                        <h4 class="leader-name">Simon Mpembee</h4>
+                        <p class="leader-title">Technical Officer</p>
+                        <p class="leader-desc">Software development, system architecture, and technical integrations.</p>
+                    </div>
+
+                    <div class="leader-card">
+                        <div class="leader-avatar" aria-hidden="true">KL</div>
+                        <h4 class="leader-name">Khafsa Hassan Lulela</h4>
+                        <p class="leader-title">Business Development</p>
+                        <p class="leader-desc">Client relations, market development, partnerships, and project acquisition.</p>
+                    </div>
+                </div>
+            </aside>
+
         </div>
-
-    </div>
-
+    </section>
 </div>

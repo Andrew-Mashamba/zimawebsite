@@ -87,7 +87,7 @@
 
         </style>
     </head>
-    <body class="font-inter bg-white-50 opacity-0.07 antialiased text-slate-600 h-full h-100">
+    <body class="font-inter antialiased bg-white text-slate-600 min-h-screen">
 
         <main class="">
 

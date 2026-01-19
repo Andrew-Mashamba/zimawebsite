@@ -1,2 +1,33 @@
+# ZIMA Solutions Limited - robots.txt
+# https://zima.co.tz
+# Last updated: 2025-01-19
+
+# Allow all search engines to crawl public pages
 User-agent: *
-Disallow:
+Allow: /
+Allow: /about
+Allow: /service
+Allow: /team
+Allow: /contact
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /register
+Disallow: /password/
+Disallow: /email/
+Disallow: /api/
+Disallow: /livewire/
+Disallow: /storage/
+Disallow: /_debugbar/
+Disallow: /sanctum/
+Disallow: /user/
+
+# Block URL parameters that create duplicate content
+Disallow: /*?*
+Allow: /*?q=
+
+# Sitemap locations (W3C format with timezone)
+Sitemap: https://zima.co.tz/sitemap.xml
+Sitemap: https://zima.co.tz/image-sitemap.xml

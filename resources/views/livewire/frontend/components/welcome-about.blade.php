@@ -1,24 +1,103 @@
 <div>
-    <div class="title_outer title_without_animation" data-height="535">
-        <div class="title title_size_large  position_left  has_background"
-            style="background-size:1920px auto;background-image:url(https://bridge510.qodeinteractive.com/wp-content/uploads/2019/02/about-us-img-01.jpg);height:535px;">
-            <div class="image not_responsive"><img itemprop="image"
-                    src="https://bridge510.qodeinteractive.com/wp-content/uploads/2019/02/about-us-img-01.jpg" alt="&nbsp;">
-            </div>
-            <div class="title_holder" style="padding-top:104px;height:431px;">
-                <div class="container">
-                    <div class="container_inner clearfix">
-                        <div class="title_subtitle_holder">
-                            <div class="title_subtitle_holder_inner">
-                                <span class="text_above_title">EXPLORE THE FEATURES</span>
-                                <h1><span>About Us</span></h1>
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%);
+            padding: 120px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
 
-                                <span class="subtitle">Etiam scelerisque tortor at lectus dapibus, nec fermentum diam
-                                    feugiat. </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 98, 27, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .page-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero-label {
+            color: #FF621B;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .page-hero-title {
+            color: #ffffff;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 52px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .page-hero-subtitle {
+            color: rgba(255, 255, 255, 0.85);
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 20px;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: #FF621B;
+        }
+
+        .breadcrumb span {
+            color: #FF621B;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero-title {
+                font-size: 36px;
+            }
+            .page-hero {
+                padding: 100px 20px 60px;
+            }
+        }
+    </style>
+
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <p class="page-hero-label">About Us</p>
+            <h1 class="page-hero-title">Transforming Digital Futures</h1>
+            <p class="page-hero-subtitle">
+                A forward-thinking technology company specializing in digital transformation for financial institutions, government agencies, and enterprises across Africa.
+            </p>
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <span>About Us</span>
             </div>
         </div>
     </div>

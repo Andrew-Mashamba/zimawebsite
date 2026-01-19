@@ -35,4 +35,27 @@ return [
         ],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Search Engine Verification
+    |--------------------------------------------------------------------------
+    |
+    | Verification codes for Google Search Console, Bing Webmaster Tools,
+    | and other search engines. Get these from each search engine's
+    | webmaster tools after adding your site.
+    |
+    */
+
+    'google' => [
+        'site_verification' => env('GOOGLE_SITE_VERIFICATION', ''),
+    ],
+
+    'bing' => [
+        'site_verification' => env('BING_SITE_VERIFICATION', ''),
+    ],
+
+    'yandex' => [
+        'site_verification' => env('YANDEX_SITE_VERIFICATION', ''),
+    ],
+
 ];
