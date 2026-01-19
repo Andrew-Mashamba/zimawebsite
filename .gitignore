@@ -1,6 +1,6 @@
 /.phpunit.cache
 /node_modules
-/public/build
+# /public/build - included for cPanel deployment (npm not available)
 /public/hot
 /public/storage
 /storage/*.key
