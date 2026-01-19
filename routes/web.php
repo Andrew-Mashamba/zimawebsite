@@ -82,3 +82,13 @@ Route::get('terms-of-service', function () {
 // Dynamic Sitemap
 Route::get('sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index']);
 
+// PDF Downloads
+Route::prefix('pdf')->group(function () {
+    Route::get('partnership-proposal', [\App\Http\Controllers\PdfController::class, 'partnershipProposal'])
+        ->name('pdf.partnership-proposal');
+    Route::get('partnership-proposal/view', [\App\Http\Controllers\PdfController::class, 'viewPartnershipProposal'])
+        ->name('pdf.partnership-proposal.view');
+    Route::get('partnership-proposal/save', [\App\Http\Controllers\PdfController::class, 'savePartnershipProposal'])
+        ->name('pdf.partnership-proposal.save');
+});
+
