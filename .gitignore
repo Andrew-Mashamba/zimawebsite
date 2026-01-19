@@ -8,7 +8,7 @@
 /vendor
 .env
 .env.backup
-.env.production
+# .env.production is allowed (contains placeholders, no secrets)
 .phpactor.json
 .phpunit.result.cache
 Homestead.json

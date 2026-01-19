@@ -1,1 +1,3 @@
 *.sqlite*
+# Allow SQL backup for version control
+!backup.sql
