@@ -1,9 +1,14 @@
 @extends('layouts.web')
 
 @section('title', 'Privacy Policy - ZIMA Solutions Limited')
+@section('title', 'Privacy Policy | ZIMA Solutions Limited')
 @section('meta_title', 'Privacy Policy | ZIMA Solutions Limited')
-@section('meta_description', 'Privacy Policy for ZIMA Solutions Limited. Learn how we collect, use, and protect your personal information.')
+@section('meta_description', 'Privacy Policy for ZIMA Solutions Limited. How we collect, use, and protect your personal information. Tanzania.')
 @section('meta_keywords', 'privacy policy, data protection, ZIMA Solutions, personal information')
+@section('og_title', 'Privacy Policy | ZIMA Solutions Limited')
+@section('og_description', 'How ZIMA Solutions Limited collects, uses, and protects your personal information.')
+@section('twitter_title', 'Privacy Policy | ZIMA Solutions Limited')
+@section('twitter_description', 'Privacy Policy for ZIMA Solutions Limited.')
 @section('og_title', 'Privacy Policy - ZIMA Solutions')
 @section('og_description', 'Learn how ZIMA Solutions collects, uses, and protects your personal information.')
 
@@ -39,7 +44,7 @@
 <div class="legal-page-container" style="padding: 0;">
     <!-- Hero Section -->
     <section style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 60px; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <nav aria-label="Breadcrumb" style="margin-bottom: 20px;">
                 <ol style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; font-size: 14px; opacity: 0.8;">
                     <li><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
@@ -54,7 +59,7 @@
 
     <!-- Content Section -->
     <section style="padding: 60px 40px; background: #fff;">
-        <div style="max-width: 800px; margin: 0 auto; font-family: 'Source Sans Pro', sans-serif; color: #333; line-height: 1.8;">
+        <div style="max-width: 1200px; margin: 0 auto; font-family: 'Source Sans Pro', sans-serif; color: #333; line-height: 1.8;">
 
             <h2 style="font-family: 'Roboto Slab', serif; font-size: 24px; color: #1F3B8D; margin: 40px 0 20px; padding-top: 20px; border-top: 1px solid #eee;">1. Introduction</h2>
             <p>ZIMA Solutions Limited ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website zima.co.tz or use our services.</p>

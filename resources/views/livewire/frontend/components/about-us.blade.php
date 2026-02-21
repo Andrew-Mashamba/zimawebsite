@@ -231,7 +231,7 @@
                         Our focus is to empower organizations through automation, data-driven decision-making, and digital inclusion, helping clients achieve sustainable growth in an evolving digital economy.
                     </p>
 
-                    <a href="#contact" style="display: inline-block; margin-top: 20px; padding: 14px 32px; background: #FF621B; color: #fff; text-decoration: none; border-radius: 50px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600; transition: all 0.3s ease;">
+                    <a href="{{ route('contact') }}" style="display: inline-block; margin-top: 20px; padding: 14px 32px; background: #FF621B; color: #fff; text-decoration: none; border-radius: 50px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600; transition: all 0.3s ease;">
                         Partner With Us
                     </a>
                 </div>

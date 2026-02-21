@@ -1,11 +1,13 @@
 @extends('layouts.web')
 
-@section('title', 'GePG Gateway Integration - Government e-Payment Gateway | ZIMA Solutions')
-@section('meta_title', 'GePG Integration Tanzania - Government Payments | ZIMA Solutions Limited')
-@section('meta_description', 'GePG Gateway integration services enabling your bank to collect government revenue through all channels - branches, ATMs, mobile banking, internet banking, and USSD.')
-@section('meta_keywords', 'GePG integration Tanzania, Government e-Payment Gateway, government payments Tanzania, TRA payments, government revenue collection, bill payments Tanzania')
-@section('og_title', 'GePG Gateway Integration - ZIMA Solutions')
+@section('title', 'Payment Gateway Tanzania – Government Electronic Payment Gateway (GePG) | ZIMA Solutions')
+@section('meta_title', 'Payment Gateway Tanzania – Government Electronic Payment Gateway (GePG) | ZIMA Solutions')
+@section('meta_description', 'Government electronic payment gateway (GePG) integration in Tanzania. ZIMA connects your bank to collect government revenue via branches, ATMs, mobile banking, internet banking, and USSD.')
+@section('meta_keywords', 'payment gateway Tanzania, government electronic payment gateway, GePG Tanzania, Government e-Payment Gateway, government payments Tanzania, TRA payments, bill payments Tanzania')
+@section('og_title', 'GePG Integration Tanzania – Government Payments | ZIMA Solutions')
 @section('og_description', 'Enable government payment collection through all your banking channels with GePG integration.')
+@section('twitter_title', 'GePG Integration Tanzania | ZIMA Solutions')
+@section('twitter_description', 'Government e-Payment Gateway integration. All channels: branches, ATMs, mobile, USSD. Tanzania.')
 
 @section('structured_data')
 <script type="application/ld+json">
@@ -13,9 +15,9 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "{{ url('/services/gepg-gateway') }}#service",
-    "name": "GePG Gateway Integration",
+    "name": "Government Electronic Payment Gateway (GePG) Integration",
     "serviceType": "Government Payment Gateway",
-    "description": "Government electronic Payment Gateway integration enabling financial institutions to collect government revenue through branches, ATMs, mobile banking, internet banking, and USSD channels.",
+    "description": "Government electronic payment gateway (GePG) integration in Tanzania. Enables banks to collect government revenue through branches, ATMs, mobile banking, internet banking, and USSD.",
     "provider": {
         "@id": "{{ url('/') }}#organization"
     },
@@ -31,14 +33,14 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "GePG Gateway Integration",
-    "description": "GePG integration services for financial institutions in Tanzania",
+    "name": "GePG Gateway Integration | ZIMA Solutions",
+    "description": "Government e-Payment Gateway (GePG) integration for collecting government revenue via branches, ATMs, mobile and internet banking, USSD.",
     "url": "{{ url('/services/gepg-gateway') }}",
     "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}"},
-            {"@type": "ListItem", "position": 2, "name": "Services", "item": "{{ url('/service') }}"},
+            {"@type": "ListItem", "position": 2, "name": "Our Services", "item": "{{ url('/our-services') }}"},
             {"@type": "ListItem", "position": 3, "name": "GePG Gateway", "item": "{{ url('/services/gepg-gateway') }}"}
         ]
     }
@@ -80,26 +82,24 @@
 
 @section('body-section')
 <div class="service-page-container" style="padding: 0;">
-    <!-- Hero Section -->
-    <section class="service-hero" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto;">
+    <section class="service-hero" aria-label="Service overview" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <nav aria-label="Breadcrumb" style="margin-bottom: 20px;">
                 <ol style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; font-size: 14px; opacity: 0.8;">
                     <li><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
                     <li>/</li>
-                    <li><a href="/service" style="color: #fff; text-decoration: none;">Services</a></li>
+                    <li><a href="{{ route('our-services') }}" style="color: #fff; text-decoration: none;">Services</a></li>
                     <li>/</li>
                     <li>GePG Gateway</li>
                 </ol>
             </nav>
-            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px;">GePG Gateway Integration</h1>
-            <p style="font-size: 20px; line-height: 1.6; opacity: 0.9; max-width: 700px; margin: 0 auto 30px;">Enable your customers to pay government fees and taxes through all your banking channels with GePG Version 2.0 integration.</p>
-            <a href="/contact" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Consultation</a>
+            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px; color: #fff;">GePG Gateway Integration</h1>
+            <p style="font-size: 20px; line-height: 1.6; opacity: 0.9; max-width: 700px; margin: 0 auto 30px;">ZIMA provides government electronic payment gateway (GePG) integration in Tanzania. Enable your bank to collect government fees and taxes through branches, ATMs, mobile banking, internet banking, and USSD.</p>
+            <a href="{{ route('contact') }}" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Consultation</a>
         </div>
     </section>
 
-    <!-- Channels Section -->
-    <section style="padding: 80px 40px; background: #fff;">
+    <section aria-label="Supported channels" style="padding: 80px 40px; background: #fff;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="text-align: center; font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 50px; color: #1F3B8D;">Supported Payment Channels</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px;">
@@ -131,12 +131,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
-        <div style="max-width: 800px; margin: 0 auto;">
+    @include('frontend.partials.explore-more')
+
+    <section aria-label="Call to action" style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 20px;">Ready to Enable GePG Payments?</h2>
             <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Offer your customers convenient government payment services across all channels.</p>
-            <a href="/contact" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Contact Us Today</a>
+            <a href="{{ route('contact') }}" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Contact Us Today</a>
         </div>
     </section>
 </div>

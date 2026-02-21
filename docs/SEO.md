@@ -3,6 +3,8 @@
 > Comprehensive guide compiled from Google Search Central documentation.
 > Source: https://developers.google.com/search/docs
 
+**ZIMA implementation:** For this site’s applied SEO approach (page inventory, sitemap, structured data, internal linking, product/service/agent pages), see [docs/SEO-STRATEGY.md](SEO-STRATEGY.md). For visibility in AI chatbots (ChatGPT, Claude, Perplexity, DeepSeek), see [docs/AI-SEARCH-GEO.md](AI-SEARCH-GEO.md).
+
 ---
 
 ## Table of Contents

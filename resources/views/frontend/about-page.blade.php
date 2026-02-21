@@ -1,9 +1,14 @@
 @extends('layouts.web')
 
 @section('title', 'About Us - ZIMA Solutions Limited | Digital Transformation Company Tanzania')
-@section('meta_title', 'About ZIMA Solutions - Leading Fintech & Enterprise Integration Company')
-@section('meta_description', 'Learn about ZIMA Solutions Limited, a forward-thinking technology company specializing in digital transformation, RTGS/TIPS/GePG integration, and enterprise software for financial institutions in Tanzania.')
+@section('title', 'About ZIMA Solutions – Fintech & Enterprise Integration | Tanzania')
+@section('meta_title', 'About ZIMA Solutions – Fintech & Enterprise Integration | Tanzania')
+@section('meta_description', 'ZIMA Solutions Limited: digital transformation, RTGS/TIPS/GePG integration, AI agents, and enterprise software for banks, MFIs, SACCOS, and government in Tanzania. Dar es Salaam.')
 @section('meta_keywords', 'about ZIMA Solutions, fintech company Tanzania, digital transformation Dar es Salaam, enterprise software company, BOT integration specialists, technology innovation East Africa')
+@section('og_title', 'About ZIMA Solutions – Fintech & Enterprise Integration | Tanzania')
+@section('og_description', 'Digital transformation, RTGS/TIPS/GePG integration, AI agents, and enterprise software for financial institutions in Tanzania.')
+@section('twitter_title', 'About ZIMA Solutions – Fintech & Enterprise Integration | Tanzania')
+@section('twitter_description', 'Digital transformation, RTGS/TIPS/GePG integration, and enterprise software for financial institutions in Tanzania.')
 @section('og_title', 'About ZIMA Solutions - Building Digital Futures')
 @section('og_description', 'Discover ZIMA Solutions - Tanzania\'s trusted partner for enterprise integration, payment systems, and digital transformation since 2020.')
 

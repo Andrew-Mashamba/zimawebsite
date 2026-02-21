@@ -1,9 +1,14 @@
 @extends('layouts.web')
 
 @section('title', 'Our Projects - Enterprise Solutions Portfolio | ZIMA Solutions Limited')
-@section('meta_title', 'Projects & Case Studies - ZIMA Solutions Enterprise Portfolio')
-@section('meta_description', 'Explore ZIMA Solutions project portfolio: core banking systems, loan management platforms, mobile banking apps, government payment integrations, and more across Tanzania.')
+@section('title', 'Projects & Case Studies – ZIMA Solutions Portfolio | Tanzania')
+@section('meta_title', 'Projects & Case Studies – ZIMA Solutions Portfolio | Tanzania')
+@section('meta_description', 'ZIMA Solutions project portfolio: core banking, loan management, mobile banking, government payment integrations (RTGS, GePG, TIPS), and digital transformation across Tanzania.')
 @section('meta_keywords', 'ZIMA Solutions projects, enterprise software portfolio, banking software Tanzania, loan management system projects, fintech case studies, digital transformation projects')
+@section('og_title', 'Projects & Case Studies – ZIMA Solutions | Tanzania')
+@section('og_description', 'Core banking, loan management, mobile banking, government payment integrations, and digital transformation projects.')
+@section('twitter_title', 'Projects & Case Studies – ZIMA Solutions | Tanzania')
+@section('twitter_description', 'Core banking, loan management, government payment integrations, and digital transformation projects in Tanzania.')
 @section('og_title', 'Our Projects - ZIMA Solutions Portfolio')
 @section('og_description', 'Discover transformative enterprise solutions delivered by ZIMA Solutions for banks, microfinance institutions, and government agencies.')
 

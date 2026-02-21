@@ -4,8 +4,10 @@
 @section('meta_title', 'Loan Management System Tanzania - Digital Lending | ZIMA Solutions Limited')
 @section('meta_description', 'Complete loan management system for banks, MFIs, and SACCOs in Tanzania. Loan origination, credit scoring, disbursement, collection management, and regulatory reporting.')
 @section('meta_keywords', 'loan management system Tanzania, digital lending platform, loan origination, credit scoring, MFI software, SACCO software, microfinance system, loan tracking')
-@section('og_title', 'Loan Management System - ZIMA Solutions')
+@section('og_title', 'Loan Management System Tanzania – Digital Lending | ZIMA Solutions')
 @section('og_description', 'Digital lending platform with loan origination, credit scoring, and collection management for financial institutions.')
+@section('twitter_title', 'Loan Management System Tanzania | ZIMA Solutions')
+@section('twitter_description', 'Loan origination, credit scoring, disbursement, collection. Banks, MFIs, SACCOs. Tanzania.')
 
 @section('structured_data')
 <script type="application/ld+json">
@@ -61,14 +63,14 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Loan Management System",
-    "description": "Digital lending platform for financial institutions in Tanzania",
+    "name": "Loan Management System | ZIMA Solutions",
+    "description": "Digital lending platform for banks, MFIs, and SACCOS in Tanzania. Loan origination, credit scoring, disbursement, collection, BOT-compliant reporting.",
     "url": "{{ url('/services/loan-management') }}",
     "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}"},
-            {"@type": "ListItem", "position": 2, "name": "Services", "item": "{{ url('/service') }}"},
+            {"@type": "ListItem", "position": 2, "name": "Our Services", "item": "{{ url('/our-services') }}"},
             {"@type": "ListItem", "position": 3, "name": "Loan Management", "item": "{{ url('/services/loan-management') }}"}
         ]
     }
@@ -111,25 +113,24 @@
 @section('body-section')
 <div class="service-page-container" style="padding: 0;">
     <!-- Hero Section -->
-    <section class="service-hero" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto;">
+    <section class="service-hero" aria-label="Service overview" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <nav aria-label="Breadcrumb" style="margin-bottom: 20px;">
                 <ol style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; font-size: 14px; opacity: 0.8;">
                     <li><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
                     <li>/</li>
-                    <li><a href="/service" style="color: #fff; text-decoration: none;">Services</a></li>
+                    <li><a href="{{ route('our-products') }}" style="color: #fff; text-decoration: none;">Products</a></li>
                     <li>/</li>
                     <li>Loan Management</li>
                 </ol>
             </nav>
-            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px;">Loan Management System</h1>
+            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px; color: #fff;">Loan Management System</h1>
             <p style="font-size: 20px; line-height: 1.6; opacity: 0.9; max-width: 700px; margin: 0 auto 30px;">Complete digital lending platform for banks, MFIs, and SACCOs with loan origination, credit scoring, and collection management.</p>
-            <a href="/contact" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Demo</a>
+            <a href="{{ route('contact') }}" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Demo</a>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section style="padding: 80px 40px; background: #fff;">
+    <section aria-label="System features" style="padding: 80px 40px; background: #fff;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="text-align: center; font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 50px; color: #1F3B8D;">System Features</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
@@ -161,8 +162,7 @@
         </div>
     </section>
 
-    <!-- Loan Types Section -->
-    <section style="padding: 80px 40px; background: #f8f9fa;">
+    <section aria-label="Loan types" style="padding: 80px 40px; background: #f8f9fa;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="text-align: center; font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 50px; color: #1F3B8D;">Supported Loan Products</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
@@ -194,12 +194,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
-        <div style="max-width: 800px; margin: 0 auto;">
+    @include('frontend.partials.explore-more')
+
+    <section aria-label="Call to action" style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 20px;">Ready to Digitize Your Lending Operations?</h2>
             <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Get a customized loan management solution designed for your institution's needs.</p>
-            <a href="/contact" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Schedule a Demo</a>
+            <a href="{{ route('contact') }}" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Schedule a Demo</a>
         </div>
     </section>
 </div>

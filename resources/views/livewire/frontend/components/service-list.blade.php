@@ -315,92 +315,152 @@
 
     <section class="services-gradient" aria-label="Enterprise Integration Services and Digital Solutions in Tanzania">
         <div class="services-section">
-            <!-- Section Header -->
-            <p class="service-label">Our Solutions</p>
-            <h1 class="service-title">Enterprise Integration Services</h1>
+            <!-- OUR SERVICES (integration, installation, consultation) -->
+            <p class="service-label">What We Do</p>
+            <h1 class="service-title">Our Services</h1>
             <p class="service-subtitle">
-                Mission-critical integration solutions connecting Tanzania's financial institutions with national payment infrastructure, Bank of Tanzania systems, and beyond. Trusted by banks, MFIs, and government agencies.
+                Integration, installation, and consultation. We connect your systems to national infrastructure and formal banking—no full product build required.
             </p>
 
-            <!-- Integration Services -->
             <div class="integration-grid">
-                <!-- RTGS Integration -->
                 <article class="integration-card" itemscope itemtype="https://schema.org/Service">
                     <div class="integration-icon">
                         <i class="fas fa-university" aria-hidden="true"></i>
                     </div>
                     <h3 itemprop="name">RTGS Integration with Bank of Tanzania</h3>
                     <p itemprop="description">
-                        Seamless Real-Time Gross Settlement (RTGS) integration with Bank of Tanzania for high-value interbank transfers in Tanzania. Our solution supports SWIFT MT message types, MT-MX conversion to ISO 20022 standards, message translation, and automated customer notifications. Process TZS billions in secure, instant settlements.
+                        Seamless Real-Time Gross Settlement (RTGS) integration with Bank of Tanzania for high-value interbank transfers. MT message types, MT-MX conversion to ISO 20022, message translation, and automated notifications.
                     </p>
                     <ul class="benefits-list">
                         <li>Full BOT RTGS compliance and certification</li>
                         <li>ISO 20022 messaging standards support</li>
                         <li>Real-time transaction confirmations</li>
-                        <li>Reduced settlement risk for interbank transfers</li>
                     </ul>
+                    <a href="{{ route('services.rtgs') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
                 </article>
 
-                <!-- TIPS Integration -->
                 <article class="integration-card" itemscope itemtype="https://schema.org/Service">
                     <div class="integration-icon">
                         <i class="fas fa-bolt" aria-hidden="true"></i>
                     </div>
-                    <h3 itemprop="name">TIPS Integration - Tanzania Instant Payment System</h3>
+                    <h3 itemprop="name">TIPS Integration – Tanzania Instant Payment System</h3>
                     <p itemprop="description">
-                        Connect to Tanzania Instant Payment System (TIPS) - the national real-time payment switch processing over TZS 29.9 trillion annually. Enable Bank-to-Wallet (B2W), Wallet-to-Bank (W2B), Bank-to-Bank transfers, TanQR payments, and cross-border remittances with Rwanda and EAC partners.
+                        Connect to TIPS for Bank-to-Wallet, Wallet-to-Bank, Bank-to-Bank, TanQR payments, and cross-border remittances with Rwanda and EAC partners.
                     </p>
                     <ul class="benefits-list">
                         <li>24/7 instant payment processing</li>
-                        <li>TanQR code payment support</li>
-                        <li>Mobile money interoperability (M-Pesa, Airtel, Tigo)</li>
-                        <li>Cross-border EAC payment readiness</li>
+                        <li>TanQR and mobile money interoperability</li>
+                        <li>Cross-border EAC readiness</li>
                     </ul>
+                    <a href="{{ route('services.tips') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
                 </article>
 
-                <!-- GePG Gateway -->
                 <article class="integration-card" itemscope itemtype="https://schema.org/Service">
                     <div class="integration-icon">
                         <i class="fas fa-landmark" aria-hidden="true"></i>
                     </div>
                     <h3 itemprop="name">GePG Gateway Integration (Version 2.0)</h3>
                     <p itemprop="description">
-                        Government e-Payment Gateway (GePG) integration for Tanzania's mandatory government revenue collection system. Enable customers to pay taxes, fees, licenses, hospital bills, and university fees through multiple channels - branches, ATMs, mobile banking, internet banking, and USSD.
+                        Government e-Payment Gateway (GePG) integration for government revenue collection. Pay taxes, fees, licenses, and bills via branches, ATMs, mobile, internet banking, and USSD.
                     </p>
                     <ul class="benefits-list">
                         <li>Ministry of Finance GePG 2.0 compliance</li>
                         <li>Multi-channel payment collection</li>
-                        <li>Automated ERV report generation</li>
-                        <li>Real-time reconciliation with treasury</li>
+                        <li>Automated ERV and reconciliation</li>
                     </ul>
+                    <a href="{{ route('services.gepg') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
                 </article>
 
-                <!-- API Gateway Service -->
                 <article class="integration-card" itemscope itemtype="https://schema.org/Service">
                     <div class="integration-icon">
-                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <i class="fas fa-id-card" aria-hidden="true"></i>
                     </div>
-                    <h3 itemprop="name">API Gateway & Open Banking Platform</h3>
+                    <h3 itemprop="name">NIDA Integration</h3>
                     <p itemprop="description">
-                        Secure, scalable API management platform enabling open banking in Tanzania. Expose, consume, and monetize banking services with fintechs, aggregators, and third-party ecosystems. Built for Tanzania's growing digital financial services market with 63+ million mobile money wallets.
+                        Integrate with Tanzania's National Identification Authority (NIDA) for KYC and identity verification via National ID (NIN). We use our product Zima NIDA Gate so you get one simple integration point.
                     </p>
                     <ul class="benefits-list">
-                        <li>Open banking API standards</li>
-                        <li>Fintech partnership enablement</li>
-                        <li>API monetization capabilities</li>
-                        <li>OAuth 2.0 security and rate limiting</li>
+                        <li>Official NIDA verification via NIN</li>
+                        <li>Faster KYC and account opening</li>
+                        <li>Secure, compliant</li>
                     </ul>
+                    <a href="{{ route('services.nida') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
                 </article>
             </div>
 
-            <!-- FINANCIAL SERVICES & PAYMENTS -->
+            <!-- OUR PRODUCTS (coded software we sell) -->
+            <div class="category-section" style="margin-top: 60px;">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-cube" aria-hidden="true"></i>
+                    </div>
+                    <h2 class="category-title">Our Products</h2>
+                    <span class="category-count">Software we build & sell</span>
+                </div>
+                <p class="service-subtitle" style="margin-bottom: 30px;">
+                    Individual solutions to specific tasks—coded by ZIMA and sold to banks, MFIs, SACCOS, and enterprises.
+                </p>
+
+                <div class="integration-grid" style="margin-bottom: 40px;">
+                    <article class="integration-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <div class="integration-icon">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <h3 itemprop="name">AI Agents</h3>
+                        <p itemprop="description">Conversational AI agents for WhatsApp, web chat, and API. Industry-specific automation for healthcare, hospitality, retail, education, and more.</p>
+                        <a href="{{ route('ai-agents') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
+                    </article>
+                    <article class="integration-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <div class="integration-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h3 itemprop="name">API Gateway & Open Banking Platform</h3>
+                        <p itemprop="description">Secure API management platform for open banking. Expose, consume, and monetize banking services with fintechs and third-party ecosystems.</p>
+                        <a href="{{ route('services.api') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
+                    </article>
+                    <article class="integration-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <div class="integration-icon">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3 itemprop="name">Mobile Push (Payments via MNOs)</h3>
+                        <p itemprop="description">Platform to facilitate payments via M-Pesa, Airtel Money, and Tigo Pesa. Customers approve on their phone—ideal for collections, bills, e-commerce.</p>
+                        <a href="{{ route('services.mobile-push') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
+                    </article>
+                    <article class="integration-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <div class="integration-icon">
+                            <i class="fas fa-sms" aria-hidden="true"></i>
+                        </div>
+                        <h3 itemprop="name">SMS Gateway</h3>
+                        <p itemprop="description">Bulk and transactional SMS at the lowest cost in Tanzania. HTTP & SMPP API, all networks, delivery reports and sender ID.</p>
+                        <a href="{{ route('services.sms') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
+                    </article>
+                    <article class="integration-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <div class="integration-icon">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                        </div>
+                        <h3 itemprop="name">Membership Referral System (Web & App)</h3>
+                        <p itemprop="description">SACCO referral platform. Members refer via web and app; track referrals, manage incentives. TCDC-aligned.</p>
+                        <a href="{{ route('services.membership-referral') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
+                    </article>
+                    <article class="integration-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+                        <div class="integration-icon">
+                            <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+                        </div>
+                        <h3 itemprop="name">Loan Management System</h3>
+                        <p itemprop="description">Full-cycle loan origination: application, risk assessment, disbursement, repayment tracking, and collections.</p>
+                        <a href="{{ route('services.loan') }}" class="cta-btn" style="margin-top: 15px; padding: 10px 24px; font-size: 14px;">Learn more</a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- FINANCIAL SERVICES & PAYMENTS (Products) -->
             <div class="category-section">
                 <div class="category-header">
                     <div class="category-icon">
                         <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
                     </div>
                     <h2 class="category-title">Financial Services & Payments</h2>
-                    <span class="category-count">7 Solutions</span>
+                    <span class="category-count">7 Products</span>
                 </div>
 
                 <div class="projects-grid">
@@ -455,7 +515,7 @@
                         <i class="fas fa-hands-helping" aria-hidden="true"></i>
                     </div>
                     <h2 class="category-title">Microfinance & Financial Inclusion</h2>
-                    <span class="category-count">5 Solutions</span>
+                    <span class="category-count">5 Products</span>
                 </div>
 
                 <div class="projects-grid">
@@ -498,7 +558,7 @@
                         <i class="fas fa-shield-alt" aria-hidden="true"></i>
                     </div>
                     <h2 class="category-title">Compliance & Regulatory Systems</h2>
-                    <span class="category-count">4 Solutions</span>
+                    <span class="category-count">4 Products</span>
                 </div>
 
                 <div class="projects-grid">
@@ -535,7 +595,7 @@
                         <i class="fas fa-building" aria-hidden="true"></i>
                     </div>
                     <h2 class="category-title">Enterprise Management Systems</h2>
-                    <span class="category-count">5 Solutions</span>
+                    <span class="category-count">5 Products</span>
                 </div>
 
                 <div class="projects-grid">
@@ -577,8 +637,8 @@
                     <div class="category-icon">
                         <i class="fas fa-industry" aria-hidden="true"></i>
                     </div>
-                    <h2 class="category-title">Sector-Specific Solutions</h2>
-                    <span class="category-count">4 Solutions</span>
+                    <h2 class="category-title">Sector-Specific</h2>
+                    <span class="category-count">4 Products</span>
                 </div>
 
                 <div class="projects-grid">
@@ -615,7 +675,7 @@
                         <i class="fas fa-robot" aria-hidden="true"></i>
                     </div>
                     <h2 class="category-title">AI & Innovation</h2>
-                    <span class="category-count">1 Solution</span>
+                    <span class="category-count">1 Product</span>
                 </div>
 
                 <div class="projects-grid">
@@ -633,7 +693,7 @@
                     <h3>Ready to Transform Your Operations?</h3>
                     <p>Join Tanzania's leading banks, MFIs, and enterprises using ZIMA solutions. Let's discuss your requirements.</p>
                 </div>
-                <a href="#contact" class="cta-btn">Request a Demo</a>
+                <a href="{{ route('contact') }}" class="cta-btn">Request a Demo</a>
             </aside>
         </div>
     </section>

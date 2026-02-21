@@ -4,8 +4,10 @@
 @section('meta_title', 'TIPS Integration Tanzania - Instant Payments | ZIMA Solutions Limited')
 @section('meta_description', 'TIPS integration services for real-time retail payments in Tanzania. Bank-to-Wallet, Wallet-to-Bank, TanQR payments, and mobile money connectivity with 99.9% uptime.')
 @section('meta_keywords', 'TIPS integration Tanzania, Tanzania Instant Payment System, instant payments, Bank-to-Wallet, Wallet-to-Bank, TanQR, mobile money integration, real-time payments Tanzania')
-@section('og_title', 'TIPS Integration Services - ZIMA Solutions')
+@section('og_title', 'TIPS Integration Tanzania – Instant Payments | ZIMA Solutions')
 @section('og_description', 'Enable real-time retail payments with TIPS integration. Bank-to-Wallet, Wallet-to-Bank, and TanQR payment solutions.')
+@section('twitter_title', 'TIPS Integration Tanzania | ZIMA Solutions')
+@section('twitter_description', 'Real-time retail payments: Bank-to-Wallet, Wallet-to-Bank, TanQR. 99.9% uptime. Tanzania.')
 
 @section('structured_data')
 <script type="application/ld+json">
@@ -61,14 +63,14 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "TIPS Integration Services",
-    "description": "TIPS integration services for financial institutions in Tanzania",
+    "name": "TIPS Integration | ZIMA Solutions",
+    "description": "Tanzania Instant Payment System (TIPS) integration for real-time retail payments. Bank-to-wallet, wallet-to-bank, TanQR. 24/7/365.",
     "url": "{{ url('/services/tips-integration') }}",
     "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}"},
-            {"@type": "ListItem", "position": 2, "name": "Services", "item": "{{ url('/service') }}"},
+            {"@type": "ListItem", "position": 2, "name": "Our Services", "item": "{{ url('/our-services') }}"},
             {"@type": "ListItem", "position": 3, "name": "TIPS Integration", "item": "{{ url('/services/tips-integration') }}"}
         ]
     }
@@ -110,26 +112,24 @@
 
 @section('body-section')
 <div class="service-page-container" style="padding: 0;">
-    <!-- Hero Section -->
-    <section class="service-hero" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto;">
+    <section class="service-hero" aria-label="Service overview" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <nav aria-label="Breadcrumb" style="margin-bottom: 20px;">
                 <ol style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; font-size: 14px; opacity: 0.8;">
                     <li><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
                     <li>/</li>
-                    <li><a href="/service" style="color: #fff; text-decoration: none;">Services</a></li>
+                    <li><a href="{{ route('our-services') }}" style="color: #fff; text-decoration: none;">Services</a></li>
                     <li>/</li>
                     <li>TIPS Integration</li>
                 </ol>
             </nav>
-            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px;">TIPS Integration - Instant Payments</h1>
+            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px; color: #fff;">TIPS Integration - Instant Payments</h1>
             <p style="font-size: 20px; line-height: 1.6; opacity: 0.9; max-width: 700px; margin: 0 auto 30px;">Enable real-time retail payments with Tanzania Instant Payment System. Bank-to-Wallet, Wallet-to-Bank, and TanQR payments.</p>
-            <a href="/contact" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Consultation</a>
+            <a href="{{ route('contact') }}" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Consultation</a>
         </div>
     </section>
 
-    <!-- Payment Types Section -->
-    <section style="padding: 80px 40px; background: #fff;">
+    <section aria-label="Payment types and features" style="padding: 80px 40px; background: #fff;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="text-align: center; font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 50px; color: #1F3B8D;">Payment Types Supported</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
@@ -153,12 +153,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
-        <div style="max-width: 800px; margin: 0 auto;">
+    @include('frontend.partials.explore-more')
+
+    <section aria-label="Call to action" style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 20px;">Ready to Enable Instant Payments?</h2>
             <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Connect your financial institution to TIPS and offer your customers real-time payment services.</p>
-            <a href="/contact" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Contact Us Today</a>
+            <a href="{{ route('contact') }}" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Contact Us Today</a>
         </div>
     </section>
 </div>

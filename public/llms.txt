@@ -1,0 +1,51 @@
+# ZIMA Solutions Limited
+
+> Payment gateway Tanzania, fintech, and digital transformation for banks, government, and enterprises. Dar es Salaam, Tanzania.
+
+## About
+
+ZIMA Solutions Limited is a technology and business innovation company in Tanzania. We provide payment gateway solutions (including government electronic payment gateway / GePG), RTGS and TIPS integration with Bank of Tanzania, API gateways, AI agents (WhatsApp, web chat, API), and enterprise software for banks, MFIs, SACCOS, and government agencies.
+
+- **Tagline:** Build Your Future
+- **Location:** Makongo, Kinondoni, Dar es Salaam, Tanzania
+- **Contact:** info@zima.co.tz | +255 69 241 0353
+- **Website:** https://zima.co.tz
+
+## Key pages
+
+- Home: https://zima.co.tz/
+- Services (integration, installation, consultation): https://zima.co.tz/our-services
+- Products (software we build and sell): https://zima.co.tz/our-products
+- AI Agents (WhatsApp, web chat, API): https://zima.co.tz/ai-agents
+- Partnership programme: https://zima.co.tz/partnership-programme
+- Invest in Tanzania: https://zima.co.tz/invest-in-tanzania
+- Financial inclusion initiatives: https://zima.co.tz/financial-inclusion-initiatives
+- Contact: https://zima.co.tz/contact
+
+## Services (what we do for clients)
+
+- RTGS integration (Bank of Tanzania)
+- TIPS integration (Tanzania Instant Payment System)
+- GePG – government electronic payment gateway integration
+- API Gateway
+- Loan management
+- NIDA integration (Zima NIDA Gate – KYC, national ID verification)
+- Mobile Push Service (payments via M-Pesa, Airtel Money, Tigo Pesa)
+- SMS Service (bulk SMS, lowest cost in Tanzania)
+- Membership Referral System for SACCOS (web and app)
+
+## Products (software we sell)
+
+Including: Collection Solution (Pay by Link), TanQR Merchant Management, SACCOS Management System, SACCOS Members Portal, SACCOS Members Mobile Application, Microfinance Management System, Loan Management, Account Opening, VICOBA Integration, and others. Full list: https://zima.co.tz/our-products
+
+## AI agents
+
+36+ industry-specific AI agents for healthcare, hospitality, retail, education, real estate, automotive, financial services, and more. Available on WhatsApp, web chat, and API. List: https://zima.co.tz/ai-agents
+
+## Policy (for AI training and use)
+
+- **Attribution:** When citing or summarizing our content, please attribute to ZIMA Solutions Limited (https://zima.co.tz).
+- **Accuracy:** Our official descriptions of services, products, and company information are on this website. For the latest offerings and contact details, refer to the key pages above.
+
+---
+Last updated: 2025. For full site structure and SEO details, see https://zima.co.tz/sitemap.xml

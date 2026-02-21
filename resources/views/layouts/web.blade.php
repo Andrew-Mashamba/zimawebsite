@@ -36,8 +36,8 @@
     <meta name="yandex-verification" content="{{ config('services.yandex.site_verification') }}">
     @endif
 
-    <!-- Primary Meta Tags -->
-    <title>@yield('title', 'ZIMA Solutions Limited - Digital Transformation & Enterprise Integration in Tanzania')</title>
+    <!-- Primary Meta Tags: <title> uses title if set, else meta_title so all pages show correct tab/snippet -->
+    <title>@hasSection('title')@yield('title')@else@yield('meta_title', 'ZIMA Solutions Limited - Digital Transformation & Enterprise Integration in Tanzania')@endif</title>
     <meta name="title" content="@yield('meta_title', 'ZIMA Solutions Limited - Digital Transformation & Enterprise Integration in Tanzania')">
     <meta name="description" content="@yield('meta_description', 'ZIMA Solutions Limited is a leading technology company in Tanzania specializing in RTGS, TIPS, GePG integration, API gateways, and digital transformation for financial institutions and government agencies.')">
     <meta name="keywords" content="@yield('meta_keywords', 'ZIMA Solutions, digital transformation Tanzania, RTGS integration, TIPS integration, GePG gateway, API gateway, fintech Tanzania, enterprise software, BOT compliance, mobile money integration, Dar es Salaam')">

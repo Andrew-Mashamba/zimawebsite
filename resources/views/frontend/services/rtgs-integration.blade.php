@@ -4,8 +4,10 @@
 @section('meta_title', 'RTGS Integration with Bank of Tanzania | ZIMA Solutions Limited')
 @section('meta_description', 'Expert RTGS integration services connecting your banking system to Bank of Tanzania for instant high-value interbank transfers. MT message support, ISO 20022 compliance, 99.9% uptime.')
 @section('meta_keywords', 'RTGS integration Tanzania, Bank of Tanzania RTGS, real-time gross settlement, high-value payments, MT messages, ISO 20022, interbank transfers Tanzania')
-@section('og_title', 'RTGS Integration Services - ZIMA Solutions')
+@section('og_title', 'RTGS Integration with Bank of Tanzania | ZIMA Solutions')
 @section('og_description', 'Connect your financial institution to BOT RTGS for instant, secure high-value interbank transfers with 99.9% uptime guarantee.')
+@section('twitter_title', 'RTGS Integration with Bank of Tanzania | ZIMA Solutions')
+@section('twitter_description', 'Expert RTGS integration for BOT. MT messages, ISO 20022, 99.9% uptime. Tanzania.')
 
 @section('structured_data')
 <script type="application/ld+json">
@@ -61,14 +63,14 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "RTGS Integration Services",
-    "description": "RTGS integration services for financial institutions in Tanzania",
+    "name": "RTGS Integration with Bank of Tanzania | ZIMA Solutions",
+    "description": "Expert RTGS integration connecting your banking system to Bank of Tanzania for instant high-value interbank transfers. MT message support, ISO 20022 compliance.",
     "url": "{{ url('/services/rtgs-integration') }}",
     "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}"},
-            {"@type": "ListItem", "position": 2, "name": "Services", "item": "{{ url('/service') }}"},
+            {"@type": "ListItem", "position": 2, "name": "Our Services", "item": "{{ url('/our-services') }}"},
             {"@type": "ListItem", "position": 3, "name": "RTGS Integration", "item": "{{ url('/services/rtgs-integration') }}"}
         ]
     }
@@ -110,26 +112,24 @@
 
 @section('body-section')
 <div class="service-page-container" style="padding: 0;">
-    <!-- Hero Section -->
-    <section class="service-hero" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto;">
+    <section class="service-hero" aria-label="Service overview" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <nav aria-label="Breadcrumb" style="margin-bottom: 20px;">
                 <ol style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; font-size: 14px; opacity: 0.8;">
                     <li><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
                     <li>/</li>
-                    <li><a href="/service" style="color: #fff; text-decoration: none;">Services</a></li>
+                    <li><a href="{{ route('our-services') }}" style="color: #fff; text-decoration: none;">Services</a></li>
                     <li>/</li>
                     <li>RTGS Integration</li>
                 </ol>
             </nav>
-            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px;">RTGS Integration with Bank of Tanzania</h1>
+            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px; color: #fff;">RTGS Integration with Bank of Tanzania</h1>
             <p style="font-size: 20px; line-height: 1.6; opacity: 0.9; max-width: 700px; margin: 0 auto 30px;">Connect your financial institution to Tanzania's Real-Time Gross Settlement system for instant, secure high-value interbank transfers.</p>
-            <a href="/contact" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Consultation</a>
+            <a href="{{ route('contact') }}" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Consultation</a>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section style="padding: 80px 40px; background: #fff;">
+    <section aria-label="Key features" style="padding: 80px 40px; background: #fff;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="text-align: center; font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 50px; color: #1F3B8D;">Key Features</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
@@ -161,12 +161,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
-        <div style="max-width: 800px; margin: 0 auto;">
+    @include('frontend.partials.explore-more')
+
+    <section aria-label="Call to action" style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 20px;">Ready to Connect to RTGS?</h2>
             <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Get a free consultation and learn how ZIMA Solutions can integrate your systems with Bank of Tanzania's RTGS infrastructure.</p>
-            <a href="/contact" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Contact Us Today</a>
+            <a href="{{ route('contact') }}" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Contact Us Today</a>
         </div>
     </section>
 </div>

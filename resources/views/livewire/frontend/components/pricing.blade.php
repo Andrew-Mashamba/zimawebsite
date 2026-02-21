@@ -226,7 +226,7 @@
                         <li><i class="fas fa-check"></i> Full documentation</li>
                         <li><i class="fas fa-check"></i> Post-launch support included</li>
                     </ul>
-                    <a href="#contact" class="engagement-btn secondary">Get Quote</a>
+                    <a href="{{ route('contact') }}" class="engagement-btn secondary">Get Quote</a>
                 </div>
 
                 <!-- Dedicated Team -->
@@ -243,7 +243,7 @@
                         <li><i class="fas fa-check"></i> Agile development process</li>
                         <li><i class="fas fa-check"></i> Monthly retainer pricing</li>
                     </ul>
-                    <a href="#contact" class="engagement-btn primary">Start Partnership</a>
+                    <a href="{{ route('contact') }}" class="engagement-btn primary">Start Partnership</a>
                 </div>
 
                 <!-- Support & Maintenance -->
@@ -260,7 +260,7 @@
                         <li><i class="fas fa-check"></i> Performance optimization</li>
                         <li><i class="fas fa-check"></i> SLA-backed response times</li>
                     </ul>
-                    <a href="#contact" class="engagement-btn secondary">Learn More</a>
+                    <a href="{{ route('contact') }}" class="engagement-btn secondary">Learn More</a>
                 </div>
             </div>
         </div>

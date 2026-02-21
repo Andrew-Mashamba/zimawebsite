@@ -37,15 +37,42 @@ Route::get('service', function(){
     return view('frontend.service-page')
 ;})->name('service');
 
+Route::get('our-services', function(){
+    return view('frontend.our-services');
+})->name('our-services');
+
+Route::get('our-products', function(){
+    return view('frontend.our-products');
+})->name('our-products');
+
+Route::get('products/{slug}', [\App\Http\Controllers\ProductController::class, 'show'])->name('products.show');
 
 Route::get('team', function(){
     return view('frontend.team-page')
 ;})->name('team');
 
 
-Route::get('contact', function(){
-    return view('frontend.contact-page')
-;})->name('contact');
+Route::get('contact', function () {
+    return view('frontend.contact-page');
+})->name('contact');
+
+Route::get('ai-agents', function(){
+    return view('frontend.ai-agents');
+})->name('ai-agents');
+
+Route::get('ai-agents/{slug}', [\App\Http\Controllers\AiAgentController::class, 'show'])->name('ai-agents.show');
+
+Route::get('invest-in-tanzania', function(){
+    return view('frontend.invest-in-tanzania');
+})->name('invest-in-tanzania');
+
+Route::get('financial-inclusion-initiatives', function(){
+    return view('frontend.financial-inclusion-initiatives');
+})->name('financial-inclusion-initiatives');
+
+Route::get('partnership-programme', function(){
+    return view('frontend.partnership-programme');
+})->name('partnership-programme');
 
 // Service Landing Pages
 Route::prefix('services')->group(function () {
@@ -68,6 +95,22 @@ Route::prefix('services')->group(function () {
     Route::get('loan-management', function () {
         return view('frontend.services.loan-management');
     })->name('services.loan');
+
+    Route::get('nida-integration', function () {
+        return view('frontend.services.nida-integration');
+    })->name('services.nida');
+
+    Route::get('mobile-push-service', function () {
+        return view('frontend.services.mobile-push-service');
+    })->name('services.mobile-push');
+
+    Route::get('sms-service', function () {
+        return view('frontend.services.sms-service');
+    })->name('services.sms');
+
+    Route::get('membership-referral-system', function () {
+        return view('frontend.services.membership-referral-system');
+    })->name('services.membership-referral');
 });
 
 // Legal Pages

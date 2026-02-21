@@ -1,9 +1,14 @@
 @extends('layouts.web')
 
 @section('title', 'Enterprise Solutions & Services - ZIMA Solutions Limited')
-@section('meta_title', 'Enterprise Integration Services - RTGS, TIPS, GePG, API Gateway | ZIMA Solutions')
-@section('meta_description', 'Discover ZIMA Solutions enterprise services: RTGS integration, TIPS connectivity, GePG gateway, API management, loan systems, and custom software development for financial institutions in Tanzania.')
-@section('meta_keywords', 'enterprise integration services Tanzania, RTGS integration service, TIPS integration Tanzania, GePG gateway service, API gateway development, loan management system, fintech services East Africa')
+@section('title', 'Solutions – RTGS, TIPS, GePG, API Gateway, NIDA, SMS | ZIMA Solutions')
+@section('meta_title', 'Solutions – RTGS, TIPS, GePG, API Gateway, NIDA, SMS | ZIMA Solutions')
+@section('meta_description', 'ZIMA enterprise services: RTGS & TIPS integration with BOT, GePG gateway, API gateway, NIDA integration, mobile push payments, SMS service, SACCO referral system, and loan management. Tanzania.')
+@section('meta_keywords', 'enterprise integration Tanzania, RTGS TIPS GePG, NIDA integration, mobile push payment, bulk SMS Tanzania, SACCO referral system, loan management, fintech services East Africa')
+@section('og_title', 'Solutions – RTGS, TIPS, GePG, API Gateway | ZIMA Solutions')
+@section('og_description', 'Enterprise services: RTGS, TIPS, GePG, API gateway, NIDA, mobile push, SMS, SACCO referral, loan management for Tanzania.')
+@section('twitter_title', 'Solutions – RTGS, TIPS, GePG, API Gateway | ZIMA Solutions')
+@section('twitter_description', 'Enterprise services: RTGS, TIPS, GePG, API gateway, NIDA, mobile push, SMS, loan management for Tanzania.')
 @section('og_title', 'Enterprise Solutions & Services - ZIMA Solutions')
 @section('og_description', 'Comprehensive enterprise integration services including RTGS, TIPS, GePG, and API gateway solutions for banks and financial institutions.')
 
@@ -94,6 +99,42 @@
                     "name": "BOT RTSIS Reporting",
                     "description": "Automated real-time supervisory information reporting system for Bank of Tanzania compliance.",
                     "serviceType": "Regulatory Compliance"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "NIDA Integration - Zima NIDA Gate",
+                    "description": "National ID verification via NIDA for KYC and compliance in Tanzania.",
+                    "serviceType": "Identity Verification"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile Push Service",
+                    "description": "Payment collection via M-Pesa, Airtel Money, and Tigo Pesa in Tanzania.",
+                    "serviceType": "Payment Processing"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "SMS Service",
+                    "description": "Bulk and transactional SMS at the lowest cost in Tanzania.",
+                    "serviceType": "SMS Gateway"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Membership Referral System",
+                    "description": "Web and app platform for SACCOS to grow membership through referrals.",
+                    "serviceType": "Software Application"
                 }
             }
         ]

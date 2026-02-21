@@ -4,8 +4,10 @@
 @section('meta_title', 'API Gateway Tanzania - Secure API Management | ZIMA Solutions Limited')
 @section('meta_description', 'Enterprise API Gateway solutions for secure, scalable system integration. Rate limiting, authentication, analytics, and seamless third-party connectivity for financial institutions.')
 @section('meta_keywords', 'API Gateway Tanzania, enterprise integration, API management, secure APIs, system integration, microservices, financial API, banking integration')
-@section('og_title', 'API Gateway Solutions - ZIMA Solutions')
+@section('og_title', 'API Gateway Tanzania – Secure API Management | ZIMA Solutions')
 @section('og_description', 'Secure, scalable API Gateway solutions for enterprise system integration and third-party connectivity.')
+@section('twitter_title', 'API Gateway Tanzania | ZIMA Solutions')
+@section('twitter_description', 'Enterprise API Gateway: rate limiting, auth, analytics. Financial institutions. Tanzania.')
 
 @section('structured_data')
 <script type="application/ld+json">
@@ -61,14 +63,14 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "API Gateway Solutions",
-    "description": "Enterprise API Gateway solutions for system integration in Tanzania",
+    "name": "API Gateway & Open Banking | ZIMA Solutions",
+    "description": "Secure API Gateway and open banking platform for Tanzania. Rate limiting, OAuth 2.0, JWT, analytics. Connect core banking to fintechs and third parties.",
     "url": "{{ url('/services/api-gateway') }}",
     "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ url('/') }}"},
-            {"@type": "ListItem", "position": 2, "name": "Services", "item": "{{ url('/service') }}"},
+            {"@type": "ListItem", "position": 2, "name": "Our Services", "item": "{{ url('/our-services') }}"},
             {"@type": "ListItem", "position": 3, "name": "API Gateway", "item": "{{ url('/services/api-gateway') }}"}
         ]
     }
@@ -110,26 +112,24 @@
 
 @section('body-section')
 <div class="service-page-container" style="padding: 0;">
-    <!-- Hero Section -->
-    <section class="service-hero" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto;">
+    <section class="service-hero" aria-label="Service overview" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 80px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <nav aria-label="Breadcrumb" style="margin-bottom: 20px;">
                 <ol style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; font-size: 14px; opacity: 0.8;">
                     <li><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
                     <li>/</li>
-                    <li><a href="/service" style="color: #fff; text-decoration: none;">Services</a></li>
+                    <li><a href="{{ route('our-products') }}" style="color: #fff; text-decoration: none;">Products</a></li>
                     <li>/</li>
                     <li>API Gateway</li>
                 </ol>
             </nav>
-            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px;">Enterprise API Gateway Solutions</h1>
+            <h1 style="font-family: 'Roboto Slab', serif; font-size: 48px; font-weight: 700; margin-bottom: 20px; color: #fff;">Enterprise API Gateway Solutions</h1>
             <p style="font-size: 20px; line-height: 1.6; opacity: 0.9; max-width: 700px; margin: 0 auto 30px;">Secure, scalable API management platform for seamless system integration and third-party connectivity.</p>
-            <a href="/contact" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Consultation</a>
+            <a href="{{ route('contact') }}" class="btn-primary" style="background: #FF621B; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Request Consultation</a>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section style="padding: 80px 40px; background: #fff;">
+    <section aria-label="Gateway features" style="padding: 80px 40px; background: #fff;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="text-align: center; font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 50px; color: #1F3B8D;">Gateway Features</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
@@ -161,8 +161,7 @@
         </div>
     </section>
 
-    <!-- Use Cases Section -->
-    <section style="padding: 80px 40px; background: #f8f9fa;">
+    <section aria-label="Use cases" style="padding: 80px 40px; background: #f8f9fa;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="text-align: center; font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 50px; color: #1F3B8D;">Common Use Cases</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
@@ -182,12 +181,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
-        <div style="max-width: 800px; margin: 0 auto;">
+    @include('frontend.partials.explore-more')
+
+    <section aria-label="Call to action" style="padding: 80px 40px; background: linear-gradient(135deg, #FF621B 0%, #e55516 100%); text-align: center; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="font-family: 'Roboto Slab', serif; font-size: 36px; margin-bottom: 20px;">Ready to Streamline Your Integrations?</h2>
             <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Get a customized API Gateway solution designed for your specific integration needs.</p>
-            <a href="/contact" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Contact Us Today</a>
+            <a href="{{ route('contact') }}" style="background: #fff; color: #FF621B; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Contact Us Today</a>
         </div>
     </section>
 </div>

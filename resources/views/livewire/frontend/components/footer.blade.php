@@ -192,23 +192,33 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About Us</a></li>
-                    <li><a href="/service">Solutions</a></li>
-                    <li><a href="/team">Projects</a></li>
+                    <li><a href="/our-services">Services</a></li>
+                    <li><a href="/our-products">Products</a></li>
+                    <li><a href="/partnership-programme">Partnership Programme</a></li>
+                    <li><a href="/invest-in-tanzania">Invest in Tanzania</a></li>
+                    <li><a href="/financial-inclusion-initiatives">Financial Inclusion Initiatives</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
 
-            <!-- Services -->
-            <nav class="footer-section" aria-label="Our Services">
-                <h4>Our Solutions</h4>
+            <!-- Services & Products -->
+            <nav class="footer-section" aria-label="Services and Products">
+                <h4>Services</h4>
                 <ul>
-                    <li><a href="/service#rtgs">RTGS & TIPS Integration</a></li>
-                    <li><a href="/service#gepg">GePG Gateway</a></li>
-                    <li><a href="/service#api">API Gateway</a></li>
-                    <li><a href="/service#microfinance">Microfinance & SACCOS</a></li>
-                    <li><a href="/service#loans">Loan Management</a></li>
-                    <li><a href="/service#enterprise">Enterprise Systems</a></li>
-                    <li><a href="/service">View All Solutions</a></li>
+                    <li><a href="/services/rtgs-integration">RTGS Integration</a></li>
+                    <li><a href="/services/tips-integration">TIPS Integration</a></li>
+                    <li><a href="/services/gepg-gateway">GePG Gateway</a></li>
+                    <li><a href="/services/nida-integration">NIDA Integration</a></li>
+                </ul>
+                <h4 style="margin-top: 20px;">Products</h4>
+                <ul>
+                    <li><a href="/ai-agents">AI Agents</a></li>
+                    <li><a href="/services/api-gateway">API Gateway</a></li>
+                    <li><a href="/services/mobile-push-service">Mobile Push</a></li>
+                    <li><a href="/services/sms-service">SMS Service</a></li>
+                    <li><a href="/services/membership-referral-system">Membership Referral System</a></li>
+                    <li><a href="/services/loan-management">Loan Management</a></li>
+                    <li><a href="/our-products">View all</a></li>
                 </ul>
             </nav>
 
@@ -239,6 +249,7 @@
             <div class="footer-bottom-links">
                 <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/terms-of-service">Terms of Service</a>
+                <a href="/llms.txt" title="Site summary for AI systems">llms.txt</a>
             </div>
         </div>
     </footer>

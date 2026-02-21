@@ -62,38 +62,45 @@
             z-index: 2;
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: center;
             height: 100%;
-            padding: 0 10%;
-            max-width: 800px;
+            padding: 0 5vw;
+            text-align: center;
+        }
+
+        .hero-copy {
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto;
         }
 
         .hero-logo {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
+            width: 72px;
+            height: 72px;
+            margin-bottom: 1.25rem;
             opacity: 0;
-            transform: translateX(-30px);
-            transition: all 0.6s ease-out 0.2s;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out 0.15s;
         }
 
         .hero-slide.active .hero-logo {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
         }
 
         .hero-title {
             color: #FEFFFF;
-            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
             font-family: 'Roboto Slab', serif;
-            text-shadow: 0 4px 20px rgba(31, 59, 141, 0.5);
-            letter-spacing: -2px;
-            margin: 0 0 20px 0;
-            line-height: 1.1;
+            text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+            letter-spacing: -0.02em;
+            margin: 0 0 1rem 0;
+            line-height: 1.15;
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out 0.4s;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out 0.25s;
         }
 
         .hero-slide.active .hero-title {
@@ -102,17 +109,17 @@
         }
 
         .hero-description {
-            color: #F9FAFF;
-            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: rgba(254, 255, 255, 0.95);
+            font-size: clamp(0.9375rem, 1.8vw, 1.125rem);
             font-weight: 400;
             font-family: 'Source Sans Pro', sans-serif;
-            line-height: 1.8;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-            margin: 0 0 30px 0;
-            max-width: 500px;
+            line-height: 1.65;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+            margin: 0 0 1.75rem 0;
+            max-width: 100%;
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out 0.6s;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out 0.35s;
         }
 
         .hero-slide.active .hero-description {
@@ -123,10 +130,11 @@
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            justify-content: center;
+            gap: 12px;
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out 0.8s;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out 0.45s;
         }
 
         .hero-slide.active .hero-buttons {
@@ -134,51 +142,46 @@
             transform: translateY(0);
         }
 
-        .btn-primary {
-            background-color: #FF621B;
-            color: #FEFFFF !important;
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 1.75rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
             border: none;
-            padding: 16px 36px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 14px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 98, 27, 0.4);
-            text-decoration: none;
-            display: inline-block;
-            font-family: 'Source Sans Pro', sans-serif;
-            cursor: pointer;
         }
 
-        .btn-primary:hover {
-            background-color: #e55516;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 98, 27, 0.5);
+        .hero-btn-primary {
+            background: #FF621B;
+            color: #FEFFFF;
+            box-shadow: 0 4px 14px rgba(255, 98, 27, 0.4);
         }
 
-        .btn-secondary {
-            background-color: transparent;
-            color: #FEFFFF !important;
-            border: 2px solid #FEFFFF;
-            padding: 14px 34px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 14px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            font-family: 'Source Sans Pro', sans-serif;
-            cursor: pointer;
+        .hero-btn-primary:hover {
+            background: #e55516;
+            color: #FEFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 98, 27, 0.5);
         }
 
-        .btn-secondary:hover {
-            background-color: #FEFFFF;
-            color: #1F3B8D !important;
-            transform: translateY(-3px);
+        .hero-btn-secondary {
+            background: transparent;
+            color: #FEFFFF;
+            border: 2px solid rgba(254, 255, 255, 0.9);
+        }
+
+        .hero-btn-secondary:hover {
+            background: rgba(254, 255, 255, 0.15);
+            color: #FEFFFF;
+            transform: translateY(-2px);
         }
 
         /* Navigation Arrows */
@@ -266,14 +269,17 @@
         /* Mobile */
         @media (max-width: 768px) {
             .hero-content {
-                padding: 0 5%;
+                padding: 0 6%;
+            }
+            .hero-copy {
+                max-width: 100%;
             }
             .hero-nav {
                 display: none;
             }
-            .btn-primary, .btn-secondary {
-                padding: 12px 24px;
-                font-size: 12px;
+            .hero-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.8125rem;
             }
             .scroll-indicator {
                 bottom: 80px;
@@ -288,12 +294,14 @@
                 <img src="{{ asset('/vf/n4.jpg') }}" alt="Digital transformation solutions - ZIMA Solutions" class="hero-slide-bg" loading="eager">
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
-                    <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
-                    <h1 class="hero-title">DIGITAL TRANSFORMATION</h1>
-                    <p class="hero-description">Empowering financial institutions, government agencies, and enterprises through secure, scalable, and intelligent systems that drive operational excellence.</p>
-                    <div class="hero-buttons">
-                        <a href="#about" class="btn-primary">Explore Solutions</a>
-                        <a href="#contact" class="btn-secondary">Get Started</a>
+                    <div class="hero-copy">
+                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
+                        <h1 class="hero-title">Digital transformation</h1>
+                        <p class="hero-description">Empowering financial institutions, government agencies, and enterprises through secure, scalable, and intelligent systems that drive operational excellence.</p>
+                        <div class="hero-buttons">
+                            <a href="#about" class="hero-btn hero-btn-primary">Explore solutions</a>
+                            <a href="{{ route('contact') }}" class="hero-btn hero-btn-secondary">Get started</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -303,12 +311,14 @@
                 <img src="{{ asset('/vf/n5.jpeg') }}" alt="Enterprise software solutions - ZIMA Solutions" class="hero-slide-bg" loading="lazy">
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
-                    <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
-                    <h2 class="hero-title">ENTERPRISE SOLUTIONS</h2>
-                    <p class="hero-description">From loan management to payment gateways, HR systems to data warehousing - we build mission-critical platforms that transform how organizations operate.</p>
-                    <div class="hero-buttons">
-                        <a href="#services" class="btn-primary">View Solutions</a>
-                        <a href="#contact" class="btn-secondary">Request Demo</a>
+                    <div class="hero-copy">
+                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
+                        <h2 class="hero-title">Enterprise solutions</h2>
+                        <p class="hero-description">From loan management to payment gateways, HR systems to data warehousing—we build mission-critical platforms that transform how organizations operate.</p>
+                        <div class="hero-buttons">
+                            <a href="#about" class="hero-btn hero-btn-primary">View solutions</a>
+                            <a href="{{ route('contact') }}" class="hero-btn hero-btn-secondary">Request demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -318,12 +328,14 @@
                 <img src="{{ asset('/vf/n6.jpeg') }}" alt="RTGS TIPS GePG integration - ZIMA Solutions" class="hero-slide-bg" loading="lazy">
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
-                    <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
-                    <h2 class="hero-title">BUILD YOUR FUTURE</h2>
-                    <p class="hero-description">Seamless integration with BOT systems, mobile money platforms, and enterprise infrastructure. Your trusted partner for digital transformation across Africa.</p>
-                    <div class="hero-buttons">
-                        <a href="#impact" class="btn-primary">Our Projects</a>
-                        <a href="#contact" class="btn-secondary">Partner With Us</a>
+                    <div class="hero-copy">
+                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
+                        <h2 class="hero-title">Build your future</h2>
+                        <p class="hero-description">Seamless integration with BOT systems, mobile money platforms, and enterprise infrastructure. Your trusted partner for digital transformation across Africa.</p>
+                        <div class="hero-buttons">
+                            <a href="#about" class="hero-btn hero-btn-primary">Our solutions</a>
+                            <a href="{{ route('contact') }}" class="hero-btn hero-btn-secondary">Partner with us</a>
+                        </div>
                     </div>
                 </div>
             </div>

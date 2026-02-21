@@ -1,16 +1,16 @@
 # ZIMA Solutions Limited - robots.txt
 # https://zima.co.tz
-# Last updated: 2025-01-19
+# Last updated: 2025-02-21
 
-# Allow all search engines to crawl public pages
+# Allow all crawlers (Google, Bing, AI/LLM bots) to access public pages
+# Includes: /, /about, /service, /our-services, /our-products, /team, /contact,
+# /ai-agents, /ai-agents/*, /services/*, /products/*, /invest-in-tanzania,
+# /financial-inclusion-initiatives, /partnership-programme, /pdf/*, /word/*,
+# /llms.txt, /privacy-policy, /terms-of-service
 User-agent: *
 Allow: /
-Allow: /about
-Allow: /service
-Allow: /team
-Allow: /contact
 
-# Disallow admin and private areas
+# Disallow admin, auth, and non-public paths (do not index)
 Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /login
@@ -24,10 +24,10 @@ Disallow: /_debugbar/
 Disallow: /sanctum/
 Disallow: /user/
 
-# Block URL parameters that create duplicate content
+# Avoid duplicate content from query strings (e.g. /contact?subject=... same as /contact)
 Disallow: /*?*
 Allow: /*?q=
 
-# Sitemap locations (W3C format with timezone)
+# Sitemaps
 Sitemap: https://zima.co.tz/sitemap.xml
 Sitemap: https://zima.co.tz/image-sitemap.xml

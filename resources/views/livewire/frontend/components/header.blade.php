@@ -301,6 +301,25 @@
             display: none !important;
         }
 
+        .dropdown-menu li.dropdown-group-label {
+            padding: 8px 20px 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1F3B8D;
+            border-bottom: 1px solid #e5e7eb;
+            margin-top: 4px;
+        }
+        .dropdown-menu li.dropdown-group-label:first-child {
+            margin-top: 0;
+        }
+        .dropdown-menu li.dropdown-group-label:hover {
+            background: transparent;
+            border-left-color: transparent;
+            padding-left: 20px;
+        }
+
         .menu-item.has-dropdown > a::after {
             display: none !important;
         }
@@ -375,6 +394,20 @@
 
         .mobile-submenu li a:hover {
             color: #1F3B8D;
+        }
+
+        .mobile-submenu li.mobile-submenu-label {
+            padding: 12px 10px 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1F3B8D;
+            border-bottom: none;
+            list-style: none;
+        }
+        .mobile-submenu li.mobile-submenu-label:first-child {
+            padding-top: 8px;
         }
 
         /* Mobile Menu Button */
@@ -470,7 +503,7 @@
                                 <div class="wp-block-qi-blocks-icon-with-text qodef-block-container" style="display: flex; align-items: center;">
                                     <div class="qi-block-icon-with-text qodef-block qodef-m qodef-layout--before-content" style="display: flex; align-items: center; gap: 6px;">
                                         <div class="qodef-m-icon-wrapper" style="display: flex; align-items: center;">
-                                            <a href="#contact" style="display: flex; align-items: center;">
+                                            <a href="{{ route('contact') }}" style="display: flex; align-items: center;">
                                                 <div class="qodef-m-icon-holder" style="display: flex; align-items: center; justify-content: center;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" style="display: block;">
                                                         <path d="M15.4 4.9c-.8-2-2.3-3.4-4.3-4.3-2-.9-4.3-.9-6.3 0S1.4 2.9.5 4.9C.2 5.8 0 6.9 0 8s.2 2.2.6 3.1c.9 2 2.3 3.4 4.3 4.3 1 .4 2 .6 3.1.6s2.1-.2 3.1-.6c2-.8 3.4-2.3 4.3-4.3.4-1 .6-2.1.6-3.1 0-1.1-.2-2.1-.6-3.1zM14.7 8c0 1.2-.3 2.3-.9 3.4-.6 1-1.4 1.8-2.5 2.4-1 .6-2.2.9-3.4.9-.9 0-1.8-.2-2.6-.5-.8-.4-1.6-.8-2.1-1.4-.6-.6-1.1-1.3-1.4-2.1-.3-.9-.5-1.8-.5-2.7 0-1.2.3-2.3.9-3.4.6-1 1.4-1.8 2.4-2.4 1-.6 2.1-.9 3.4-.9s2.3.3 3.4.9c1 .6 1.9 1.4 2.5 2.4.5 1.1.8 2.2.8 3.4z" fill="#ffffff"/>
@@ -481,7 +514,7 @@
                                         </div>
                                         <div class="qodef-m-content" style="display: flex; align-items: center;">
                                             <h4 class="qodef-m-title" style="margin: 0; line-height: 1;">
-                                                <a href="#contact"><span class="qodef-m-title-text">Mon - Fri 8:00 - 17:00</span></a>
+                                                <a href="{{ route('contact') }}"><span class="qodef-m-title-text">Mon - Fri 8:00 - 17:00</span></a>
                                             </h4>
                                         </div>
                                     </div>
@@ -530,37 +563,37 @@
                                     </a>
                                 </li>
                                 <li class="menu-item narrow">
-                                    <a href="/#about">
-                                        <span>About</span>
-                                    </a>
-                                </li>
-                                <li class="menu-item narrow has-dropdown">
-                                    <a href="/service">
-                                        <span>Solutions</span>
-                                        <i class="fas fa-chevron-down dropdown-arrow"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/service#rtgs">RTGS Integration</a></li>
-                                        <li><a href="/service#tips">TIPS Integration</a></li>
-                                        <li><a href="/service#gepg">GePG Gateway</a></li>
-                                        <li><a href="/service#api">API Gateway</a></li>
-                                        <li><a href="/service#microfinance">Microfinance & SACCOS</a></li>
-                                        <li><a href="/service#loans">Loan Management</a></li>
-                                        <li><a href="/service">View All Solutions</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item narrow">
-                                    <a href="/#impact">
-                                        <span>Projects</span>
+                                    <a href="{{ route('our-services') }}">
+                                        <span>Services</span>
                                     </a>
                                 </li>
                                 <li class="menu-item narrow">
-                                    <a href="/#clients">
-                                        <span>Clients</span>
+                                    <a href="{{ route('our-products') }}">
+                                        <span>Products</span>
                                     </a>
                                 </li>
                                 <li class="menu-item narrow">
-                                    <a href="/#contact">
+                                    <a href="{{ route('ai-agents') }}">
+                                        <span>AI Agents</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item narrow">
+                                    <a href="{{ route('partnership-programme') }}">
+                                        <span>Partnership Programme</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item narrow">
+                                    <a href="{{ route('invest-in-tanzania') }}">
+                                        <span>Invest in Tanzania</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item narrow">
+                                    <a href="{{ route('financial-inclusion-initiatives') }}">
+                                        <span>Financial Inclusion</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item narrow">
+                                    <a href="{{ route('contact') }}">
                                         <span>Contact</span>
                                     </a>
                                 </li>
@@ -591,21 +624,22 @@
                                 <a href="{{ route('welcome') }}" class="current"><span>Home</span></a>
                             </li>
                             <li class="menu-item">
-                                <a href="{{ route('about') }}"><span>About</span></a>
-                            </li>
-                            <li class="menu-item has-submenu">
-                                <a href="{{ route('service') }}"><span>Solutions</span></a>
-                                <ul class="mobile-submenu">
-                                    <li><a href="/service#rtgs">RTGS Integration</a></li>
-                                    <li><a href="/service#tips">TIPS Integration</a></li>
-                                    <li><a href="/service#gepg">GePG Gateway</a></li>
-                                    <li><a href="/service#api">API Gateway</a></li>
-                                    <li><a href="/service#microfinance">Microfinance & SACCOS</a></li>
-                                    <li><a href="/service#loans">Loan Management</a></li>
-                                </ul>
+                                <a href="{{ route('our-services') }}"><span>Services</span></a>
                             </li>
                             <li class="menu-item">
-                                <a href="{{ route('team') }}"><span>Projects</span></a>
+                                <a href="{{ route('our-products') }}"><span>Products</span></a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('ai-agents') }}"><span>AI Agents</span></a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('partnership-programme') }}"><span>Partnership Programme</span></a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('invest-in-tanzania') }}"><span>Invest in Tanzania</span></a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{ route('financial-inclusion-initiatives') }}"><span>Financial Inclusion</span></a>
                             </li>
                             <li class="menu-item">
                                 <a href="{{ route('contact') }}"><span>Contact</span></a>

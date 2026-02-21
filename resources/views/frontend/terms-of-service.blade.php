@@ -1,9 +1,14 @@
 @extends('layouts.web')
 
 @section('title', 'Terms of Service - ZIMA Solutions Limited')
+@section('title', 'Terms of Service | ZIMA Solutions Limited')
 @section('meta_title', 'Terms of Service | ZIMA Solutions Limited')
-@section('meta_description', 'Terms of Service for ZIMA Solutions Limited. Read our terms and conditions for using our website and services.')
+@section('meta_description', 'Terms of Service for ZIMA Solutions Limited. Terms and conditions for using our website and services. Tanzania.')
 @section('meta_keywords', 'terms of service, terms and conditions, ZIMA Solutions, service agreement')
+@section('og_title', 'Terms of Service | ZIMA Solutions Limited')
+@section('og_description', 'Terms and conditions for using ZIMA Solutions Limited website and services.')
+@section('twitter_title', 'Terms of Service | ZIMA Solutions Limited')
+@section('twitter_description', 'Terms of Service for ZIMA Solutions Limited.')
 @section('og_title', 'Terms of Service - ZIMA Solutions')
 @section('og_description', 'Terms and conditions for using ZIMA Solutions website and services.')
 
@@ -39,7 +44,7 @@
 <div class="legal-page-container" style="padding: 0;">
     <!-- Hero Section -->
     <section style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 40px 60px; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <nav aria-label="Breadcrumb" style="margin-bottom: 20px;">
                 <ol style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; font-size: 14px; opacity: 0.8;">
                     <li><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
@@ -54,7 +59,7 @@
 
     <!-- Content Section -->
     <section style="padding: 60px 40px; background: #fff;">
-        <div style="max-width: 800px; margin: 0 auto; font-family: 'Source Sans Pro', sans-serif; color: #333; line-height: 1.8;">
+        <div style="max-width: 1200px; margin: 0 auto; font-family: 'Source Sans Pro', sans-serif; color: #333; line-height: 1.8;">
 
             <h2 style="font-family: 'Roboto Slab', serif; font-size: 24px; color: #1F3B8D; margin: 40px 0 20px; padding-top: 20px; border-top: 1px solid #eee;">1. Acceptance of Terms</h2>
             <p>By accessing and using the ZIMA Solutions Limited website (zima.co.tz) and services, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or services.</p>
