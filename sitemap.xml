@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage - Primary landing page -->
+    <url>
+        <loc>https://zima.co.tz/</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://zima.co.tz/about</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <!-- Services Page - Key conversion page -->
+    <url>
+        <loc>https://zima.co.tz/service</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <!-- Team/Projects Page -->
+    <url>
+        <loc>https://zima.co.tz/team</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://zima.co.tz/contact</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <!-- Service Landing Pages -->
+    <url>
+        <loc>https://zima.co.tz/services/rtgs-integration</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://zima.co.tz/services/tips-integration</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://zima.co.tz/services/gepg-gateway</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://zima.co.tz/services/api-gateway</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://zima.co.tz/services/loan-management</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://zima.co.tz/privacy-policy</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://zima.co.tz/terms-of-service</loc>
+        <lastmod>2025-01-19T08:00:00+03:00</lastmod>
+    </url>
+
+</urlset>
