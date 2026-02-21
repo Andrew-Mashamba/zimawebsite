@@ -31,7 +31,7 @@
 @endsection
 
 @section('body-section')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{{-- Font Awesome loaded in header component --}}
 <section class="invest-hero" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 100px 24px 60px; text-align: center;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <nav aria-label="Breadcrumb" style="margin-bottom: 20px;">

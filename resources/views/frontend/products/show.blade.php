@@ -60,7 +60,7 @@
 @endsection
 
 @section('body-section')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{{-- Font Awesome loaded in header component --}}
 <div class="product-page-container" style="padding: 0;">
     {{-- Hero --}}
     <section class="product-hero" aria-label="Product overview" style="background: linear-gradient(135deg, #1F3B8D 0%, #2a4a9e 100%); color: #fff; padding: 120px 24px 80px; text-align: center;">

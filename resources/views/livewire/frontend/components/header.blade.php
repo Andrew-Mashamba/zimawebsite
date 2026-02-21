@@ -1,7 +1,13 @@
 <div>
-    {{-- Font Awesome: load non-render-blocking to improve LCP (media=print then switch to all) --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    {{-- Font Awesome: Self-hosted for faster loading (no external DNS/TLS overhead) --}}
+    <link rel="stylesheet" href="{{ asset('/fonts/fontawesome/css/fontawesome.min.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/fonts/fontawesome/css/solid.min.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('/fonts/fontawesome/css/brands.min.css') }}" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="{{ asset('/fonts/fontawesome/css/fontawesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/fonts/fontawesome/css/solid.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/fonts/fontawesome/css/brands.min.css') }}">
+    </noscript>
     <style>
         /* Modern Header - ZIMA Brand Colors */
         .header_top {

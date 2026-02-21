@@ -31,7 +31,7 @@
 @endsection
 
 @section('body-section')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{{-- Font Awesome loaded in header component --}}
 <style>
 .fii-section { padding: 56px 24px; max-width: 1200px; margin: 0 auto; }
 .fii-section-alt { background: #f5f6f8; }

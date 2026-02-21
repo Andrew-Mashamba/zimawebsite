@@ -382,22 +382,15 @@
     <link rel="alternate" hreflang="en" href="{{ url()->current() }}">
     <link rel="alternate" hreflang="x-default" href="{{ url()->current() }}">
 
-    <!-- Preconnect to critical third-party origins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
-    <!-- Preload LCP image for faster rendering -->
+    <!-- Preload LCP image for homepage only -->
+    @if(request()->is('/'))
     <link rel="preload" as="image" href="{{ asset('/vf/n4.webp') }}" type="image/webp" fetchpriority="high">
+    @endif
 
-    <!-- DNS Prefetch for third-party resources -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-
-    <!-- Google Fonts: load async to avoid render blocking (LCP) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Local Fonts (self-hosted for faster loading) -->
+    <link rel="preload" href="{{ asset('/fonts/google/roboto-slab-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('/fonts/google/source-sans-pro-400.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ asset('/fonts/google/fonts.css') }}">
 
     <!-- Vite Assets -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
