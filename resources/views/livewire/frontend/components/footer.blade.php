@@ -1,4 +1,4 @@
-<div>
+<footer role="contentinfo" aria-label="Site footer">
     <style>
         .zima-footer {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -164,7 +164,7 @@
         }
     </style>
 
-    <footer class="zima-footer" role="contentinfo" aria-label="Site Footer">
+    <div class="zima-footer">
         <div class="footer-container">
             <!-- About Section -->
             <div class="footer-section footer-about">
@@ -252,5 +252,5 @@
                 <a href="/llms.txt" title="Site summary for AI systems">llms.txt</a>
             </div>
         </div>
-    </footer>
-</div>
+    </div>
+</footer>

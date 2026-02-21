@@ -47,6 +47,15 @@
             transform: scale(1.1);
         }
 
+        .hero-slide picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
         .hero-slide-overlay {
             position: absolute;
             top: 0;
@@ -75,9 +84,11 @@
             margin: 0 auto;
         }
 
+        /* Match natural aspect ratio of zima2.png (348×426 ≈ 0.82) to avoid aspect-ratio best-practice warning */
         .hero-logo {
             width: 72px;
-            height: 72px;
+            height: 88px;
+            object-fit: contain;
             margin-bottom: 1.25rem;
             opacity: 0;
             transform: translateY(20px);
@@ -160,13 +171,13 @@
         }
 
         .hero-btn-primary {
-            background: #FF621B;
+            background: #D95214;
             color: #FEFFFF;
-            box-shadow: 0 4px 14px rgba(255, 98, 27, 0.4);
+            box-shadow: 0 4px 14px rgba(217, 82, 20, 0.4);
         }
 
         .hero-btn-primary:hover {
-            background: #e55516;
+            background: #C44A12;
             color: #FEFFFF;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(255, 98, 27, 0.5);
@@ -208,6 +219,11 @@
             background: #FF621B;
         }
 
+        .hero-nav:focus-visible {
+            outline: 2px solid #FEFFFF;
+            outline-offset: 2px;
+        }
+
         .hero-nav-prev {
             left: 20px;
         }
@@ -224,24 +240,53 @@
             transform: translateX(-50%);
             z-index: 10;
             display: flex;
-            gap: 10px;
+            gap: 12px;
+            align-items: center;
         }
 
+        /* Touch target min 44×44px (accessibility); visual dot centered */
         .hero-dot {
+            min-width: 44px;
+            min-height: 44px;
+            padding: 0;
+            border-radius: 50%;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-dot::before {
+            content: '';
             width: 12px;
             height: 12px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.5);
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 0;
         }
 
-        .hero-dot.active {
-            background: #FF621B;
-            width: 30px;
+        .hero-dot.active::before {
+            width: 20px;
+            height: 12px;
             border-radius: 6px;
+            background: #D95214;
+        }
+
+        .hero-dot:focus-visible {
+            outline: 2px solid #FEFFFF;
+            outline-offset: 2px;
+        }
+
+        .hero-btn:focus-visible {
+            outline: 2px solid #FEFFFF;
+            outline-offset: 2px;
+        }
+
+        .hero-slider:focus-visible {
+            outline: 2px solid #FEFFFF;
+            outline-offset: 2px;
         }
 
         /* Scroll Indicator */
@@ -287,15 +332,18 @@
         }
     </style>
 
-    <div class="hero-slider" id="heroSlider">
+    <div class="hero-slider" id="heroSlider" role="region" aria-label="Hero carousel" aria-roledescription="carousel" tabindex="0">
         <div class="hero-slides">
-            <!-- Slide 1 -->
-            <div class="hero-slide active" data-index="0">
-                <img src="{{ asset('/vf/n4.jpg') }}" alt="Digital transformation solutions - ZIMA Solutions" class="hero-slide-bg" loading="eager">
+            <!-- Slide 1 (LCP image: fetchpriority=high, no lazy; WebP with JPEG fallback) -->
+            <div class="hero-slide active" data-index="0" aria-hidden="false">
+                <picture>
+                    <source type="image/webp" srcset="{{ asset('/vf/n4.webp') }}">
+                    <img src="{{ asset('/vf/n4.jpg') }}" alt="Digital transformation solutions - ZIMA Solutions" class="hero-slide-bg" loading="eager" decoding="async" fetchpriority="high" width="1680" height="940">
+                </picture>
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
                     <div class="hero-copy">
-                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
+                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
                         <h1 class="hero-title">Digital transformation</h1>
                         <p class="hero-description">Empowering financial institutions, government agencies, and enterprises through secure, scalable, and intelligent systems that drive operational excellence.</p>
                         <div class="hero-buttons">
@@ -306,13 +354,16 @@
                 </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="hero-slide" data-index="1">
-                <img src="{{ asset('/vf/n5.jpeg') }}" alt="Enterprise software solutions - ZIMA Solutions" class="hero-slide-bg" loading="lazy">
+            <!-- Slide 2 (WebP with JPEG fallback) -->
+            <div class="hero-slide" data-index="1" aria-hidden="true">
+                <picture>
+                    <source type="image/webp" srcset="{{ asset('/vf/n5.webp') }}">
+                    <img src="{{ asset('/vf/n5.jpeg') }}" alt="Enterprise software solutions - ZIMA Solutions" class="hero-slide-bg" loading="lazy" decoding="async" width="1680" height="940">
+                </picture>
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
                     <div class="hero-copy">
-                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
+                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
                         <h2 class="hero-title">Enterprise solutions</h2>
                         <p class="hero-description">From loan management to payment gateways, HR systems to data warehousing—we build mission-critical platforms that transform how organizations operate.</p>
                         <div class="hero-buttons">
@@ -323,13 +374,16 @@
                 </div>
             </div>
 
-            <!-- Slide 3 -->
-            <div class="hero-slide" data-index="2">
-                <img src="{{ asset('/vf/n6.jpeg') }}" alt="RTGS TIPS GePG integration - ZIMA Solutions" class="hero-slide-bg" loading="lazy">
+            <!-- Slide 3 (WebP with JPEG fallback) -->
+            <div class="hero-slide" data-index="2" aria-hidden="true">
+                <picture>
+                    <source type="image/webp" srcset="{{ asset('/vf/n6.webp') }}">
+                    <img src="{{ asset('/vf/n6.jpeg') }}" alt="RTGS TIPS GePG integration - ZIMA Solutions" class="hero-slide-bg" loading="lazy" decoding="async" width="1680" height="940">
+                </picture>
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
                     <div class="hero-copy">
-                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo">
+                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
                         <h2 class="hero-title">Build your future</h2>
                         <p class="hero-description">Seamless integration with BOT systems, mobile money platforms, and enterprise infrastructure. Your trusted partner for digital transformation across Africa.</p>
                         <div class="hero-buttons">
@@ -350,8 +404,8 @@
         </button>
 
         <!-- Pagination -->
-        <div class="hero-pagination">
-            <button class="hero-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+        <div class="hero-pagination" role="group" aria-label="Slide navigation">
+            <button class="hero-dot active" data-slide="0" aria-label="Go to slide 1" aria-current="true"></button>
             <button class="hero-dot" data-slide="1" aria-label="Go to slide 2"></button>
             <button class="hero-dot" data-slide="2" aria-label="Go to slide 3"></button>
         </div>
@@ -378,8 +432,14 @@
 
             function goToSlide(index) {
                 // Remove active from all
-                slides.forEach(function(slide) { slide.classList.remove('active'); });
-                dots.forEach(function(dot) { dot.classList.remove('active'); });
+                slides.forEach(function(slide) {
+                    slide.classList.remove('active');
+                    slide.setAttribute('aria-hidden', 'true');
+                });
+                dots.forEach(function(dot) {
+                    dot.classList.remove('active');
+                    dot.removeAttribute('aria-current');
+                });
 
                 // Set new active
                 currentSlide = index;
@@ -387,7 +447,9 @@
                 if (currentSlide < 0) currentSlide = totalSlides - 1;
 
                 slides[currentSlide].classList.add('active');
+                slides[currentSlide].setAttribute('aria-hidden', 'false');
                 dots[currentSlide].classList.add('active');
+                dots[currentSlide].setAttribute('aria-current', 'true');
             }
 
             function nextSlide() {
@@ -424,10 +486,23 @@
 
             dots.forEach(function(dot) {
                 dot.addEventListener('click', function() {
-                    var slideIndex = parseInt(this.getAttribute('data-slide'));
+                    var slideIndex = parseInt(this.getAttribute('data-slide'), 10);
                     goToSlide(slideIndex);
                     resetAutoplay();
                 });
+            });
+
+            // Keyboard: arrow keys when focus is inside the slider
+            slider.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    prevSlide();
+                    resetAutoplay();
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    nextSlide();
+                    resetAutoplay();
+                }
             });
 
             // Start autoplay

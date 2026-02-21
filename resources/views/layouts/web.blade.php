@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- ============================================================
          SEARCH ENGINE VERIFICATION TAGS
@@ -385,10 +385,12 @@
     <!-- Preconnect to critical third-party origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- DNS Prefetch for third-party resources -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -439,6 +441,20 @@
         /* Touch target optimization */
         a, button, [role="button"], input, select, textarea {
             touch-action: manipulation;
+        }
+
+        /* Visible focus for keyboard users (manual a11y check) */
+        a:focus-visible,
+        button:focus-visible,
+        [role="button"]:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--color-primary, #1F3B8D);
+            outline-offset: 2px;
+        }
+        a:focus-visible {
+            outline-color: var(--color-secondary, #FF621B);
         }
 
         /* Mobile optimizations */

@@ -68,7 +68,7 @@
         <div style="max-width: 1200px; margin: 0 auto;">
             {{-- Corporate block --}}
             <div style="text-align: center; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 1px solid #e5e7eb;">
-                <p style="font-family: 'Roboto Slab', serif; font-size: 20px; font-weight: 700; color: #FF621B; margin: 0 0 8px;">Our Motto</p>
+                <p style="font-family: 'Roboto Slab', serif; font-size: 20px; font-weight: 700; color: #B84814; margin: 0 0 8px;">Our Motto</p>
                 <h2 style="font-family: 'Roboto Slab', serif; font-size: 28px; font-weight: 700; color: #1F3B8D; margin: 0 0 32px;">Build Your Future</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; text-align: left;">
                     <div>
@@ -88,37 +88,37 @@
                 <a href="{{ route('our-services') }}" style="background: #f8f9fa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.25s ease;">
                     <h3 style="font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 700; color: #1F3B8D; margin: 0 0 8px;">Services</h3>
                     <p style="font-size: 14px; line-height: 1.55; color: #6b7280; margin: 0;">RTGS, TIPS, GePG, and NIDA integration. We connect your systems to national infrastructure.</p>
-                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #FF621B;">View services →</span>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #B84814;">View services →</span>
                 </a>
                 <a href="{{ route('our-products') }}" style="background: #f8f9fa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.25s ease;">
                     <h3 style="font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 700; color: #1F3B8D; margin: 0 0 8px;">Products</h3>
                     <p style="font-size: 14px; line-height: 1.55; color: #6b7280; margin: 0;">Software we build and sell: API Gateway, AI Agents, Loan Management, SMS, SACCO systems, and more.</p>
-                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #FF621B;">View products →</span>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #B84814;">View products →</span>
                 </a>
                 <a href="{{ route('ai-agents') }}" style="background: #f8f9fa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.25s ease;">
                     <h3 style="font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 700; color: #1F3B8D; margin: 0 0 8px;">AI Agents</h3>
                     <p style="font-size: 14px; line-height: 1.55; color: #6b7280; margin: 0;">Conversational AI for WhatsApp, web chat, and API. Industry solutions for healthcare, retail, education.</p>
-                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #FF621B;">Learn more →</span>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #B84814;">Learn more →</span>
                 </a>
                 <a href="{{ route('partnership-programme') }}" style="background: #f8f9fa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.25s ease;">
                     <h3 style="font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 700; color: #1F3B8D; margin: 0 0 8px;">Partnership Programme</h3>
                     <p style="font-size: 14px; line-height: 1.55; color: #6b7280; margin: 0;">50/50 strategic partnerships. Your idea + our technology. Co-invest, co-build, co-own.</p>
-                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #FF621B;">Partnership details →</span>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #B84814;">Partnership details →</span>
                 </a>
                 <a href="{{ route('invest-in-tanzania') }}" style="background: #f8f9fa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.25s ease;">
                     <h3 style="font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 700; color: #1F3B8D; margin: 0 0 8px;">Invest in Tanzania</h3>
                     <p style="font-size: 14px; line-height: 1.55; color: #6b7280; margin: 0;">For foreign companies and individuals. Explore Tanzania’s tech sector with ZIMA as your local partner.</p>
-                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #FF621B;">Investment opportunities →</span>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #B84814;">Investment opportunities →</span>
                 </a>
                 <a href="{{ route('financial-inclusion-initiatives') }}" style="background: #f8f9fa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.25s ease;">
                     <h3 style="font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 700; color: #1F3B8D; margin: 0 0 8px;">Financial Inclusion</h3>
                     <p style="font-size: 14px; line-height: 1.55; color: #6b7280; margin: 0;">Scalable digital infrastructure for banks, SACCOS, and underserved communities. Impact-driven, policy-aligned.</p>
-                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #FF621B;">Initiatives →</span>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #B84814;">Initiatives →</span>
                 </a>
                 <a href="{{ route('contact') }}" style="background: #f8f9fa; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.25s ease;">
                     <h3 style="font-family: 'Roboto Slab', serif; font-size: 18px; font-weight: 700; color: #1F3B8D; margin: 0 0 8px;">Contact</h3>
                     <p style="font-size: 14px; line-height: 1.55; color: #6b7280; margin: 0;">Get in touch for consultations, demos, or partnership discussions.</p>
-                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #FF621B;">Contact us →</span>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 13px; font-weight: 600; color: #B84814;">Contact us →</span>
                 </a>
             </div>
         </div>
@@ -131,7 +131,7 @@
     {{-- Short About + Stats (from original about-us, condensed) --}}
     <section aria-label="Who we are" style="background: #fff; padding: 56px 24px;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <p style="color: #FF621B; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; margin-bottom: 8px;">Who We Are</p>
+            <p style="color: #B84814; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; margin-bottom: 8px;">Who We Are</p>
             <h2 style="font-family: 'Roboto Slab', serif; font-size: 28px; font-weight: 700; color: #1F3B8D; margin-bottom: 16px;">Transforming Digital Futures</h2>
             <p style="font-size: 16px; line-height: 1.75; color: #374151; margin-bottom: 32px;">ZIMA Solutions Limited is a technology and business innovation company specializing in digital transformation for financial institutions, government agencies, and enterprises. We design and implement secure, scalable systems that drive operational efficiency, compliance, and digital inclusion.</p>
             <div class="home-stats-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">

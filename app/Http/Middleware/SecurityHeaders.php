@@ -51,6 +51,10 @@ class SecurityHeaders
             // Prevents MIME type sniffing
             $response->headers->set('X-Content-Type-Options', 'nosniff');
 
+            // Cross-Origin-Opener-Policy (COOP)
+            // Isolates the top-level window from cross-origin documents (e.g. pop-ups)
+            $response->headers->set('Cross-Origin-Opener-Policy', 'same-origin');
+
             // X-Frame-Options
             // Prevents clickjacking
             $response->headers->set('X-Frame-Options', 'SAMEORIGIN');

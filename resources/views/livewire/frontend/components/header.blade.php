@@ -1,5 +1,7 @@
 <div>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {{-- Font Awesome: load non-render-blocking to improve LCP (media=print then switch to all) --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     <style>
         /* Modern Header - ZIMA Brand Colors */
         .header_top {
@@ -461,7 +463,7 @@
                                 <div class="wp-block-qi-blocks-icon-with-text qodef-block-container" style="display: flex; align-items: center;">
                                     <div class="qi-block-icon-with-text qodef-block qodef-m qodef-layout--before-content" style="display: flex; align-items: center; gap: 6px;">
                                         <div class="qodef-m-icon-wrapper" style="display: flex; align-items: center;">
-                                            <a href="tel:+255692410353" style="display: flex; align-items: center;">
+                                            <a href="tel:+255692410353" style="display: flex; align-items: center;" aria-label="Call us: +255 69 241 0353">
                                                 <div class="qodef-m-icon-holder" style="display: flex; align-items: center; justify-content: center;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" style="display: block;">
                                                         <path d="M12.5 6.9c-.3 0-.6-.2-.6-.5-.2-1.2-1.1-2-2.3-2.3-.3-.1-.5-.4-.5-.8.1-.3.4-.5.8-.5.8.2 1.5.6 2.1 1.2.6.6 1 1.3 1.1 2.1.1.4-.2.7-.5.8h-.1zM15.4 6.9c-.3 0-.6-.2-.6-.6-.3-2.7-2.4-4.7-5-5-.4 0-.6-.4-.6-.7 0-.4.3-.6.6-.6 1.6.2 3 .9 4.2 2 1.1 1.1 1.8 2.6 2 4.2 0 .3-.2.6-.6.7zM13.2 16H13c-2.3-.2-4.5-1-6.4-2.3-1.8-1.1-3.3-2.6-4.4-4.4C1 7.4.2 5.2 0 2.9-.1 1.8.7.8 1.9.7H4.2c1 0 1.9.7 2.1 1.8.1.6.2 1.2.5 1.8.2.8 0 1.6-.6 2.2l-.5.5c.8 1.3 2 2.5 3.3 3.3l.5-.5c.6-.6 1.4-.7 2.2-.5.6.2 1.2.4 1.8.5 1 .1 1.8 1 1.8 2.1V14c0 1.1-.9 2-2.1 2z" fill="#ffffff"/>
@@ -482,7 +484,7 @@
                                 <div class="wp-block-qi-blocks-icon-with-text qodef-block-container" style="display: flex; align-items: center;">
                                     <div class="qi-block-icon-with-text qodef-block qodef-m qodef-layout--before-content" style="display: flex; align-items: center; gap: 6px;">
                                         <div class="qodef-m-icon-wrapper" style="display: flex; align-items: center;">
-                                            <a href="mailto:info@zima.co.tz" style="display: flex; align-items: center;">
+                                            <a href="mailto:info@zima.co.tz" style="display: flex; align-items: center;" aria-label="Email us: info@zima.co.tz">
                                                 <div class="qodef-m-icon-holder" style="display: flex; align-items: center; justify-content: center;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16.3 16.3" style="display: block;">
                                                         <path fill="#ffffff" d="M.834,11.734A8.08,8.08,0,0,1,.7,4.856,8.057,8.057,0,0,1,5.855.325,8.328,8.328,0,0,1,8.15,0a8.132,8.132,0,0,1,8,6.655,5.867,5.867,0,0,1-.139,3.163,2.836,2.836,0,0,1-2.4,2.082,4.058,4.058,0,0,1-.462.028,3.243,3.243,0,0,1-2.676-1.388l-.02-.026a3.405,3.405,0,0,1-2.763,1.543,3.652,3.652,0,0,1-.674-.066A3.341,3.341,0,0,1,4.36,9.41,4.175,4.175,0,0,1,4.4,6.937a4.1,4.1,0,0,1,1.392-2,3.244,3.244,0,0,1,4.474.415c.011-.061.021-.12.031-.177a.683.683,0,0,1,.766-.616.689.689,0,0,1,.463.26.762.762,0,0,1,.135.572c-.1.7-.2,1.411-.3,2.1-.041.292-.084.583-.125.875A1.862,1.862,0,0,0,11.7,9.836a2.006,2.006,0,0,0,1.483.706,1.72,1.72,0,0,0,.469-.066,1.52,1.52,0,0,0,.987-.96A3.9,3.9,0,0,0,14.857,7.4,6.629,6.629,0,0,0,11.44,2.252a6.609,6.609,0,0,0-3.265-.869,6.762,6.762,0,0,0-1.3,13.4,7.05,7.05,0,0,0,1.31.126,6.729,6.729,0,0,0,3.4-.94,1.088,1.088,0,0,1,.6-.155.624.624,0,0,1,.561.554.681.681,0,0,1-.338.723,7.88,7.88,0,0,1-2.406,1,8.29,8.29,0,0,1-1.86.212A8.136,8.136,0,0,1,.834,11.734Z"/>
@@ -503,9 +505,9 @@
                                 <div class="wp-block-qi-blocks-icon-with-text qodef-block-container" style="display: flex; align-items: center;">
                                     <div class="qi-block-icon-with-text qodef-block qodef-m qodef-layout--before-content" style="display: flex; align-items: center; gap: 6px;">
                                         <div class="qodef-m-icon-wrapper" style="display: flex; align-items: center;">
-                                            <a href="{{ route('contact') }}" style="display: flex; align-items: center;">
+                                            <a href="{{ route('contact') }}" style="display: flex; align-items: center;" aria-label="Contact us and opening hours">
                                                 <div class="qodef-m-icon-holder" style="display: flex; align-items: center; justify-content: center;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" style="display: block;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" style="display: block;" aria-hidden="true">
                                                         <path d="M15.4 4.9c-.8-2-2.3-3.4-4.3-4.3-2-.9-4.3-.9-6.3 0S1.4 2.9.5 4.9C.2 5.8 0 6.9 0 8s.2 2.2.6 3.1c.9 2 2.3 3.4 4.3 4.3 1 .4 2 .6 3.1.6s2.1-.2 3.1-.6c2-.8 3.4-2.3 4.3-4.3.4-1 .6-2.1.6-3.1 0-1.1-.2-2.1-.6-3.1zM14.7 8c0 1.2-.3 2.3-.9 3.4-.6 1-1.4 1.8-2.5 2.4-1 .6-2.2.9-3.4.9-.9 0-1.8-.2-2.6-.5-.8-.4-1.6-.8-2.1-1.4-.6-.6-1.1-1.3-1.4-2.1-.3-.9-.5-1.8-.5-2.7 0-1.2.3-2.3.9-3.4.6-1 1.4-1.8 2.4-2.4 1-.6 2.1-.9 3.4-.9s2.3.3 3.4.9c1 .6 1.9 1.4 2.5 2.4.5 1.1.8 2.2.8 3.4z" fill="#ffffff"/>
                                                         <path d="M8.7 7.8V3.5c0-.4-.3-.7-.7-.7-.4 0-.7.3-.7.7v4.6c0 .2 0 .4.2.5l2.6 2.6c.1.1.3.2.5.2s.3-.1.5-.2c.3-.3.3-.7 0-.9L8.7 7.8z" fill="#ffffff"/>
                                                     </svg>

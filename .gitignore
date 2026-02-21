@@ -21,3 +21,5 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+# Hero image originals (backup after resize/compress); omit to avoid ~24MB in repo
+/public/vf/_originals
