@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Homepage with hero images -->
+    <url>
+        <loc>https://zima.co.tz/</loc>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/zima.png</image:loc>
+            <image:title>ZIMA Solutions Limited Logo</image:title>
+            <image:caption>Official logo of ZIMA Solutions Limited - Digital transformation and enterprise integration company in Tanzania</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/zima2.png</image:loc>
+            <image:title>ZIMA Solutions Logo Icon</image:title>
+            <image:caption>ZIMA Solutions brand icon for enterprise software and fintech services</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/n4.jpg</image:loc>
+            <image:title>Digital Transformation Solutions</image:title>
+            <image:caption>Digital transformation solutions for financial institutions and enterprises in Tanzania by ZIMA Solutions</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/n5.jpeg</image:loc>
+            <image:title>Enterprise Software Solutions</image:title>
+            <image:caption>Enterprise software solutions including loan management and payment gateways for businesses in Tanzania</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/n6.jpeg</image:loc>
+            <image:title>BOT Integration Services</image:title>
+            <image:caption>Bank of Tanzania integration services including RTGS, TIPS, and GePG payment systems</image:caption>
+        </image:image>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://zima.co.tz/about</loc>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/zima.png</image:loc>
+            <image:title>ZIMA Solutions Limited</image:title>
+            <image:caption>About ZIMA Solutions - Leading technology company in Tanzania</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Services Page -->
+    <url>
+        <loc>https://zima.co.tz/service</loc>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/zima.png</image:loc>
+            <image:title>ZIMA Solutions Services</image:title>
+            <image:caption>Enterprise integration services - RTGS, TIPS, GePG, API Gateway, Loan Management</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Projects Page -->
+    <url>
+        <loc>https://zima.co.tz/team</loc>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/zima.png</image:loc>
+            <image:title>ZIMA Solutions Projects</image:title>
+            <image:caption>Enterprise projects and case studies by ZIMA Solutions Limited</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://zima.co.tz/contact</loc>
+        <image:image>
+            <image:loc>https://zima.co.tz/vf/zima.png</image:loc>
+            <image:title>Contact ZIMA Solutions</image:title>
+            <image:caption>Contact ZIMA Solutions Limited in Dar es Salaam, Tanzania</image:caption>
+        </image:image>
+    </url>
+
+</urlset>

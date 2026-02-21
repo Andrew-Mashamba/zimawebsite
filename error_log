@@ -1,0 +1,30 @@
+[19-Jan-2026 15:52:26 UTC] PHP Warning:  require(/home/zimauzmd/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:52:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/zimauzmd/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/zimauzmd/public_html/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:56:02 UTC] PHP Warning:  require(/home/zimauzmd/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:56:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/zimauzmd/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/zimauzmd/public_html/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:57:10 UTC] PHP Warning:  require(/home/zimauzmd/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:57:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/zimauzmd/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/zimauzmd/public_html/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:58:10 UTC] PHP Warning:  require(/home/zimauzmd/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:58:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/zimauzmd/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/zimauzmd/public_html/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:58:24 UTC] PHP Warning:  require(/home/zimauzmd/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 15:58:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/zimauzmd/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/zimauzmd/public_html/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 16:02:37 UTC] PHP Warning:  require(/home/zimauzmd/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/zimauzmd/public_html/index.php on line 13
+[19-Jan-2026 16:02:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/zimauzmd/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/zimauzmd/public_html/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/zimauzmd/public_html/index.php on line 13
