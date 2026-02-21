@@ -92,3 +92,9 @@ Route::prefix('pdf')->group(function () {
         ->name('pdf.partnership-proposal.save');
 });
 
+// Word Document Downloads
+Route::prefix('word')->group(function () {
+    Route::get('partnership-proposal', [\App\Http\Controllers\WordController::class, 'partnershipProposal'])
+        ->name('word.partnership-proposal');
+});
+
