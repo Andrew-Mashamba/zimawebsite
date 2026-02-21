@@ -130,6 +130,16 @@
         @else
             <form wire:submit.prevent="submit" class="contact-form">
                 <h3>Send us a message</h3>
+
+                {{-- Honeypot fields - hidden from humans, visible to bots --}}
+                <div aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; height: 0; width: 0; overflow: hidden;">
+                    <label for="website">Website (leave blank)</label>
+                    <input type="text" name="website" id="website" wire:model="website" autocomplete="off" tabindex="-1">
+                    <label for="fax_number">Fax (leave blank)</label>
+                    <input type="text" name="fax_number" id="fax_number" wire:model="fax_number" autocomplete="off" tabindex="-1">
+                </div>
+                <input type="hidden" wire:model="form_loaded_at">
+
                 @if($error)
                     <div class="alert alert-error">{{ $error }}</div>
                 @endif

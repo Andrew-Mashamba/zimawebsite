@@ -6,15 +6,16 @@ Route::get('/', function () {
     return view('frontend.home-page');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+// DISABLED - Public website only, no authentication required
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified',
+// ])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+// });
 
 
 
@@ -122,11 +123,12 @@ Route::get('terms-of-service', function () {
     return view('frontend.terms-of-service');
 })->name('terms-of-service');
 
-// Dynamic Sitemap
-Route::get('sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index']);
+// Dynamic Sitemap (rate limited to prevent crawler abuse)
+Route::get('sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index'])
+    ->middleware('throttle:sitemap');
 
-// PDF Downloads
-Route::prefix('pdf')->group(function () {
+// PDF Downloads (rate limited)
+Route::prefix('pdf')->middleware('throttle:downloads')->group(function () {
     Route::get('partnership-proposal', [\App\Http\Controllers\PdfController::class, 'partnershipProposal'])
         ->name('pdf.partnership-proposal');
     Route::get('partnership-proposal/view', [\App\Http\Controllers\PdfController::class, 'viewPartnershipProposal'])
@@ -135,8 +137,8 @@ Route::prefix('pdf')->group(function () {
         ->name('pdf.partnership-proposal.save');
 });
 
-// Word Document Downloads
-Route::prefix('word')->group(function () {
+// Word Document Downloads (rate limited)
+Route::prefix('word')->middleware('throttle:downloads')->group(function () {
     Route::get('partnership-proposal', [\App\Http\Controllers\WordController::class, 'partnershipProposal'])
         ->name('word.partnership-proposal');
 });

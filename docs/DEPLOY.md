@@ -28,3 +28,29 @@ php artisan config:clear
 php artisan view:clear
 # optional: php artisan route:cache && php artisan config:cache
 ```
+
+## Cache for static assets (Lighthouse: “Use efficient cache lifetimes”)
+
+Lighthouse may report **app-*.js** (Vite build) or other static files with **no cache** or short TTL. That usually means the **web server** is serving them (not Laravel), so our middleware never runs.
+
+**Fix:** Configure the server to send long cache for hashed assets.
+
+### Nginx (e.g. in `server` or `location`)
+
+```nginx
+location ~* ^/(build|vf)/.+\.(js|css|jpg|jpeg|png|gif|webp|woff2?|ttf|eot)$ {
+    add_header Cache-Control "public, max-age=31536000, immutable";
+}
+```
+
+### Apache (e.g. in `.htaccess` or vhost)
+
+```apache
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js|css|jpg|jpeg|png|gif|webp|woff2?|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+```
+
+Vite filenames include a hash (e.g. `app-CqflisoM.js`), so long cache is safe. After changing server config, reload the server and re-run Lighthouse.

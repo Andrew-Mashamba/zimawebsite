@@ -10,7 +10,7 @@
 
 - **LCP image (n4.jpg):** `fetchpriority="high"`, `decoding="async"`, explicit `width`/`height`, `loading="eager"`.
 - **Other hero images:** `decoding="async"`, `width`/`height`, `loading="lazy"`.
-- **Hero logo (zima2.png):** `width="72"` `height="72"` to reserve space and reduce CLS.
+- **Hero logo:** Uses `zima2-hero.png` (144×176) at 72×88 display; smaller payload than full `zima2.png`. Explicit `width`/`height` to reduce CLS.
 - **Font Awesome:** Loaded with `media="print"` + `onload="this.media='all'"` so it doesn’t block first paint; `noscript` fallback.
 - **Preconnect:** `fonts.googleapis.com`, `fonts.gstatic.com`, `cdnjs.cloudflare.com`.
 - **Google Fonts:** Already using `display=swap` in the URL.
@@ -31,20 +31,25 @@ cwebp -q 82 n4.jpg -o n4.webp && cwebp -q 82 n5.jpeg -o n5.webp && cwebp -q 82 n
 
 ## To do (remaining impact)
 
-### 1. Hero logo – smaller asset
+### 1. Hero logo – done
 
-- **zima2.png** is 348×426 but displayed at 72×72 (~24 KB). Create a 72×72 or 144×144 (2x) version and use it in the hero (or add `srcset` with a smaller image) to save ~24 KB and avoid downscaling.
+- **zima2-hero.png** (144×176, ~10 KB) is used in the hero; displayed at 72×88. Saves ~24 KB vs full zima2.png. Recreate with: `magick public/vf/zima2.png -resize 144x176 public/vf/zima2-hero.png`.
 
 ### 2. Cache lifetimes
 
-- Ensure **app JS/CSS** (Vite build) have long cache (e.g. 1 year) with cache-busting query/hash. Many hosts set this automatically.
-- Hero images: 7d is fine; after optimizing, consider longer (e.g. 30d) if filenames are stable.
+- **Vite build (app-*.js, app-*.css):** If Lighthouse reports “None” for cache, the web server is likely serving `public/build/*` directly. Set long cache there (e.g. 1 year) — see **docs/DEPLOY.md** for Nginx/Apache snippets. Filenames are hashed so immutable cache is safe.
+- Hero images / vf: 7d is fine; consider longer (e.g. 30d) if filenames are stable.
 
-### 3. Font display (optional)
+### 3. Google Fonts
 
-- Google Fonts already uses `display=swap`. For even less CLS, consider `display=optional` or font metric overrides (e.g. `size-adjust`) so layout shifts from web fonts are minimal.
+- **Render blocking:** Google Fonts CSS is loaded with `rel="preload" as="style"` + `onload` so it doesn’t block first paint; `<noscript>` fallback included.
+- **Font display:** `display=swap` is in the URL. For less CLS, consider `display=optional` or font metric overrides.
 
-### 4. Third-party JS/CSS
+### 4. Font display – Font Awesome (optional)
+
+- Font Awesome webfonts (cdnjs) don’t expose `font-display`; self-hosting the fonts with `font-display: swap` would address the Lighthouse hint (~100 ms).
+
+### 5. Third-party JS/CSS
 
 - **Livewire** and **Font Awesome** are required; minification/unused code is partly upstream. Keeping Font Awesome non-render-blocking (already done) helps LCP.
 
@@ -55,4 +60,4 @@ cwebp -q 82 n4.jpg -o n4.webp && cwebp -q 82 n5.jpeg -o n5.webp && cwebp -q 82 n
 - [ ] Critical third-party origins have `preconnect` (or `dns-prefetch`).
 - [ ] Font Awesome (and any other non-critical CSS) loaded non-render-blocking where possible.
 - [ ] Important images have explicit `width`/`height` where layout is sensitive.
-- [ ] Cache headers for static assets and Vite build outputs are adequate.
+- [ ] Cache headers for static assets and Vite build outputs (see DEPLOY.md if Lighthouse reports “None” for app-*.js).

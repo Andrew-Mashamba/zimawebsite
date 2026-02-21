@@ -1,25 +1,109 @@
+# ==============================================================================
+# ZIMA Solutions - Military Grade Security .htaccess
+# Public directory configuration for Laravel
+# ==============================================================================
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
+        Options -MultiViews -Indexes -ExecCGI -Includes
     </IfModule>
 
     RewriteEngine On
 
-    # Handle Authorization Header
+    # ==============================================================================
+    # BLOCK AUTH ROUTES (Defense in depth - also blocked in PHP middleware)
+    # ==============================================================================
+    RewriteRule ^(login|register|forgot-password|reset-password|dashboard|user|email|logout|sanctum)(/.*)?$ - [R=404,L]
+
+    # ==============================================================================
+    # BLOCK DIRECT PHP FILE ACCESS (except index.php)
+    # ==============================================================================
+    RewriteCond %{REQUEST_URI} \.php$
+    RewriteCond %{REQUEST_URI} !^/index\.php$
+    RewriteRule ^.* - [F,L]
+
+    # ==============================================================================
+    # BLOCK SENSITIVE DIRECTORIES
+    # ==============================================================================
+    RewriteRule ^storage(/.*)?$ - [F,L]
+    RewriteRule ^vendor(/.*)?$ - [F,L]
+    RewriteRule ^app(/.*)?$ - [F,L]
+    RewriteRule ^config(/.*)?$ - [F,L]
+    RewriteRule ^database(/.*)?$ - [F,L]
+    RewriteRule ^resources(/.*)?$ - [F,L]
+    RewriteRule ^routes(/.*)?$ - [F,L]
+    RewriteRule ^tests(/.*)?$ - [F,L]
+    RewriteRule ^bootstrap(/.*)?$ - [F,L]
+
+    # ==============================================================================
+    # HANDLE AUTHORIZATION HEADER
+    # ==============================================================================
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    # Handle X-XSRF-Token Header
+    # ==============================================================================
+    # HANDLE X-XSRF-TOKEN HEADER
+    # ==============================================================================
     RewriteCond %{HTTP:x-xsrf-token} .
     RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
 
-    # Redirect Trailing Slashes If Not A Folder...
+    # ==============================================================================
+    # URL NORMALIZATION
+    # ==============================================================================
+
+    # Redirect Trailing Slashes If Not A Folder
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
-    # Send Requests To Front Controller...
+    # ==============================================================================
+    # LARAVEL FRONT CONTROLLER
+    # ==============================================================================
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+# ==============================================================================
+# PREVENT DIRECTORY LISTING
+# ==============================================================================
+Options -Indexes
+
+# ==============================================================================
+# DISABLE ETAGS (Security best practice)
+# ==============================================================================
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# ==============================================================================
+# SECURITY HEADERS FOR STATIC FILES
+# ==============================================================================
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    <FilesMatch "\.(html|htm|php)$">
+        Header always set X-Frame-Options "DENY"
+    </FilesMatch>
+
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Cache static assets
+    <FilesMatch "\.(js|css|jpg|jpeg|png|gif|webp|avif|svg|woff|woff2|ttf|eot|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# ==============================================================================
+# BLOCK SENSITIVE FILES IN PUBLIC DIRECTORY
+# ==============================================================================
+<FilesMatch "^(\.htaccess|\.htpasswd|\.user\.ini|php\.ini|\.env)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

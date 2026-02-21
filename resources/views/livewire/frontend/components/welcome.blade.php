@@ -84,7 +84,7 @@
             margin: 0 auto;
         }
 
-        /* Match natural aspect ratio of zima2.png (348×426 ≈ 0.82) to avoid aspect-ratio best-practice warning */
+        /* Hero logo: zima2-hero.png 144×176 (2×72×88) for smaller payload and correct aspect ratio */
         .hero-logo {
             width: 72px;
             height: 88px;
@@ -343,7 +343,7 @@
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
                     <div class="hero-copy">
-                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
+                        <img src="{{ asset('/vf/zima2-hero.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
                         <h1 class="hero-title">Digital transformation</h1>
                         <p class="hero-description">Empowering financial institutions, government agencies, and enterprises through secure, scalable, and intelligent systems that drive operational excellence.</p>
                         <div class="hero-buttons">
@@ -363,7 +363,7 @@
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
                     <div class="hero-copy">
-                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
+                        <img src="{{ asset('/vf/zima2-hero.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
                         <h2 class="hero-title">Enterprise solutions</h2>
                         <p class="hero-description">From loan management to payment gateways, HR systems to data warehousing—we build mission-critical platforms that transform how organizations operate.</p>
                         <div class="hero-buttons">
@@ -383,7 +383,7 @@
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-content">
                     <div class="hero-copy">
-                        <img src="{{ asset('/vf/zima2.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
+                        <img src="{{ asset('/vf/zima2-hero.png') }}" alt="ZIMA Solutions logo" class="hero-logo" width="72" height="88" decoding="async">
                         <h2 class="hero-title">Build your future</h2>
                         <p class="hero-description">Seamless integration with BOT systems, mobile money platforms, and enterprise infrastructure. Your trusted partner for digital transformation across Africa.</p>
                         <div class="hero-buttons">

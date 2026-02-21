@@ -127,6 +127,28 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        /*
+        |--------------------------------------------------------------------------
+        | Security Log Channel
+        |--------------------------------------------------------------------------
+        |
+        | This channel is dedicated to security-related events such as:
+        | - Failed authentication attempts
+        | - Honeypot triggers
+        | - Rate limit exceeded
+        | - Suspicious content detection
+        | - Directory traversal attempts
+        | - SQL injection attempts
+        |
+        */
+        'security' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/security.log'),
+            'level' => 'debug',
+            'days' => 30,
+            'replace_placeholders' => true,
+        ],
+
     ],
 
 ];

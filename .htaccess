@@ -1,31 +1,240 @@
-  <IfModule mod_rewrite.c>
-      RewriteEngine On
+# ==============================================================================
+# ZIMA Solutions - Military Grade Security .htaccess
+# Root directory configuration for cPanel deployment
+# ==============================================================================
 
-      # Force HTTPS
-      RewriteCond %{HTTPS} off
-      RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-      # Redirect to public folder
-      RewriteRule ^(.*)$ public/$1 [L]
-  </IfModule>
+    # Force HTTPS (301 permanent redirect)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # Block access to sensitive files
-  <FilesMatch "^\.env|composer\.(json|lock)|package\.json|webpack\.mix\.js|phpunit\.xml|artisan$">
-      Order allow,deny
-      Deny from all
-  </FilesMatch>
+    # Redirect to public folder
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
 
-  # Block access to hidden files
-  <FilesMatch "^\.">
-      Order allow,deny
-      Deny from all
-  </FilesMatch>
+# ==============================================================================
+# BLOCK SENSITIVE FILES
+# ==============================================================================
 
-  # Security Headers
-  <IfModule mod_headers.c>
-      Header always set X-Content-Type-Options "nosniff"
-      Header always set X-Frame-Options "SAMEORIGIN"
-      Header always set X-XSS-Protection "1; mode=block"
-      Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  </IfModule>
-  
+# Block environment and configuration files
+<FilesMatch "^\.env|\.env\..+|composer\.(json|lock)|package(-lock)?\.json|yarn\.lock|webpack\.mix\.js|vite\.config\.(js|ts)|phpunit\.xml|artisan$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block documentation and readme files
+<FilesMatch "(?i)(readme|changelog|license|contributing|authors|security|todo|copying)\.(md|txt|rst|html?)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block all hidden files (starting with .)
+<FilesMatch "^\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block backup and temporary files
+<FilesMatch "\.(bak|backup|old|orig|save|swp|swo|tmp|temp|~|log|sql|tar|gz|zip|rar|7z)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block config/ini files
+<FilesMatch "\.(ini|conf|config|cfg|yml|yaml|xml)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ==============================================================================
+# BLOCK DIRECTORIES
+# ==============================================================================
+
+# Block access to version control directories
+<DirectoryMatch "/\.(git|svn|hg|bzr|cvs)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</DirectoryMatch>
+
+# Block PHP execution in storage/uploads directories
+<DirectoryMatch "/(storage|uploads|cache|logs)">
+    <FilesMatch "\.php$">
+        <IfModule mod_authz_core.c>
+            Require all denied
+        </IfModule>
+        <IfModule !mod_authz_core.c>
+            Order allow,deny
+            Deny from all
+        </IfModule>
+    </FilesMatch>
+</DirectoryMatch>
+
+# ==============================================================================
+# SECURITY HEADERS (Backup for PHP middleware)
+# ==============================================================================
+
+<IfModule mod_headers.c>
+    # Remove server signature
+    Header always unset X-Powered-By
+    Header always unset Server
+
+    # Security headers
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-Permitted-Cross-Domain-Policies "none"
+    Header always set X-Download-Options "noopen"
+
+    # Permissions Policy
+    Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+</IfModule>
+
+# Disable server signature
+ServerSignature Off
+
+# ==============================================================================
+# BLOCK MALICIOUS REQUESTS
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block empty User-Agent (common for bots/scanners)
+    RewriteCond %{HTTP_USER_AGENT} ^$ [NC]
+    RewriteRule ^.* - [F,L]
+
+    # Block known malicious bots and scanners
+    RewriteCond %{HTTP_USER_AGENT} (ahrefs|ahrefsbot|semrush|semrushbot|dotbot|rogerbot|mj12bot|blexbot|linkfluence|netcrawl|zoominfobot|seznambot|ccbot|scrapy|python-requests|python-urllib|wget|curl|libwww-perl|lwp-trivial|nikto|sqlmap|nessus|netsparker|appscan|burpsuite|acunetix|openvas|nmap|masscan|dirbuster|gobuster|wpscan|joomscan|whatweb|nuclei|httpx|subfinder|amass|altdns|dnsrecon|fierce|recon-ng|theharvester|shodan|censys|zoomeye|hunter\.io|havij|pangolin|webscarab|paros|fiddler|owasp|w3af|zap|arachni|skipfish|wapiti|uniscan|golismero|beef|metasploit) [NC]
+    RewriteRule ^.* - [F,L]
+
+    # Block dangerous HTTP methods
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|DELETE|TRACK|DEBUG|CONNECT|PUT|PATCH|OPTIONS)$ [NC]
+    RewriteRule ^.* - [F,L]
+
+    # Block SQL injection attempts in query strings
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [NC,OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) [NC,OR]
+    RewriteCond %{QUERY_STRING} base64_(en|de)code\s*\( [NC,OR]
+    RewriteCond %{QUERY_STRING} (\||%7C).*(\||%7C) [NC,OR]
+    RewriteCond %{QUERY_STRING} union\s+(all\s+)?select [NC,OR]
+    RewriteCond %{QUERY_STRING} (insert|update|delete)\s+into [NC,OR]
+    RewriteCond %{QUERY_STRING} (drop|truncate|alter)\s+table [NC,OR]
+    RewriteCond %{QUERY_STRING} exec\s*\( [NC,OR]
+    RewriteCond %{QUERY_STRING} concat\s*\( [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*object.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*embed.*(\>|%3E) [NC]
+    RewriteRule ^.* - [F,L]
+
+    # Block directory traversal attempts
+    RewriteCond %{QUERY_STRING} (\.\./|\.\.%2f|%2e%2e%2f|%2e%2e/|\.\.\\|%2e%2e%5c) [NC,OR]
+    RewriteCond %{REQUEST_URI} (\.\./|\.\.%2f|%2e%2e%2f|%2e%2e/|\.\.\\|%2e%2e%5c) [NC]
+    RewriteRule ^.* - [F,L]
+
+    # Block common exploit paths
+    RewriteCond %{REQUEST_URI} (^/etc/passwd|^/etc/shadow|boot\.ini|win\.ini|/proc/self|/dev/null) [NC,OR]
+    RewriteCond %{REQUEST_URI} (\.htaccess|\.htpasswd|\.bash_history|\.mysql_history|\.ssh) [NC]
+    RewriteRule ^.* - [F,L]
+
+    # Block PHP file inclusion attempts
+    RewriteCond %{QUERY_STRING} (http|https|ftp):// [NC,OR]
+    RewriteCond %{QUERY_STRING} (file|phar|zip|glob|data|php|expect|input|filter):// [NC]
+    RewriteRule ^.* - [F,L]
+</IfModule>
+
+# ==============================================================================
+# COMPRESSION
+# ==============================================================================
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE font/ttf font/otf font/woff font/woff2
+</IfModule>
+
+# ==============================================================================
+# BROWSER CACHING
+# ==============================================================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+
+    # HTML - short cache for dynamic content
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Cache static assets
+    <FilesMatch "\.(js|css|jpg|jpeg|png|gif|webp|avif|svg|woff|woff2|ttf|eot|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # No cache for HTML
+    <FilesMatch "\.(html|php)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+</IfModule>
