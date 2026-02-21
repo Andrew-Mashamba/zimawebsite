@@ -387,6 +387,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+    <!-- Preload LCP image for faster rendering -->
+    <link rel="preload" as="image" href="{{ asset('/vf/n4.webp') }}" type="image/webp" fetchpriority="high">
+
     <!-- DNS Prefetch for third-party resources -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -404,6 +407,24 @@
 
     <!-- Critical CSS -->
     <style>
+        /* Font Awesome font-display override for better LCP */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'fa-brands-400';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'fa-solid-900';
+            font-display: swap;
+        }
+
         /* Reset browser defaults */
         *, *::before, *::after {
             box-sizing: border-box;

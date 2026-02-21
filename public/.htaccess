@@ -89,8 +89,29 @@ FileETag None
     # Prevent MIME type sniffing
     Header always set X-Content-Type-Options "nosniff"
 
-    # Cache static assets
+    # Cache static assets (1 year)
     <FilesMatch "\.(js|css|jpg|jpeg|png|gif|webp|avif|svg|woff|woff2|ttf|eot|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# ==============================================================================
+# VITE BUILD ASSETS CACHING
+# ==============================================================================
+# Vite build assets have content hashes in filenames, safe to cache forever
+<IfModule mod_expires.c>
+    ExpiresActive On
+    <FilesMatch "\.(js|css|woff|woff2|ttf|eot)$">
+        ExpiresDefault "access plus 1 year"
+    </FilesMatch>
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|svg|ico)$">
+        ExpiresDefault "access plus 1 year"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Force cache for build assets (Vite hashed files)
+    <FilesMatch "app-[a-zA-Z0-9]+\.(js|css)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
 </IfModule>
