@@ -171,16 +171,16 @@
         }
 
         .hero-btn-primary {
-            background: #D95214;
+            background: #B8440F;
             color: #FEFFFF;
-            box-shadow: 0 4px 14px rgba(217, 82, 20, 0.4);
+            box-shadow: 0 4px 14px rgba(184, 68, 15, 0.4);
         }
 
         .hero-btn-primary:hover {
-            background: #C44A12;
+            background: #A33B0D;
             color: #FEFFFF;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 98, 27, 0.5);
+            box-shadow: 0 6px 20px rgba(184, 68, 15, 0.5);
         }
 
         .hero-btn-secondary {
@@ -367,8 +367,8 @@
                         <h2 class="hero-title">Enterprise solutions</h2>
                         <p class="hero-description">From loan management to payment gateways, HR systems to data warehousing—we build mission-critical platforms that transform how organizations operate.</p>
                         <div class="hero-buttons">
-                            <a href="#about" class="hero-btn hero-btn-primary">View solutions</a>
-                            <a href="{{ route('contact') }}" class="hero-btn hero-btn-secondary">Request demo</a>
+                            <a href="#about" class="hero-btn hero-btn-primary" tabindex="-1">View solutions</a>
+                            <a href="{{ route('contact') }}" class="hero-btn hero-btn-secondary" tabindex="-1">Request demo</a>
                         </div>
                     </div>
                 </div>
@@ -387,8 +387,8 @@
                         <h2 class="hero-title">Build your future</h2>
                         <p class="hero-description">Seamless integration with BOT systems, mobile money platforms, and enterprise infrastructure. Your trusted partner for digital transformation across Africa.</p>
                         <div class="hero-buttons">
-                            <a href="#about" class="hero-btn hero-btn-primary">Our solutions</a>
-                            <a href="{{ route('contact') }}" class="hero-btn hero-btn-secondary">Partner with us</a>
+                            <a href="#about" class="hero-btn hero-btn-primary" tabindex="-1">Our solutions</a>
+                            <a href="{{ route('contact') }}" class="hero-btn hero-btn-secondary" tabindex="-1">Partner with us</a>
                         </div>
                     </div>
                 </div>
@@ -431,10 +431,14 @@
             var nextBtn = slider.querySelector('.hero-nav-next');
 
             function goToSlide(index) {
-                // Remove active from all
+                // Remove active from all and disable focusable elements
                 slides.forEach(function(slide) {
                     slide.classList.remove('active');
                     slide.setAttribute('aria-hidden', 'true');
+                    // Prevent focus on hidden slide elements (WCAG fix)
+                    slide.querySelectorAll('a, button').forEach(function(el) {
+                        el.setAttribute('tabindex', '-1');
+                    });
                 });
                 dots.forEach(function(dot) {
                     dot.classList.remove('active');
@@ -448,6 +452,10 @@
 
                 slides[currentSlide].classList.add('active');
                 slides[currentSlide].setAttribute('aria-hidden', 'false');
+                // Re-enable focus on active slide elements
+                slides[currentSlide].querySelectorAll('a, button').forEach(function(el) {
+                    el.removeAttribute('tabindex');
+                });
                 dots[currentSlide].classList.add('active');
                 dots[currentSlide].setAttribute('aria-current', 'true');
             }
